@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+
+<title>{dede:global.cfg_webname/}</title>
+
+<meta name="description" content="{dede:global.cfg_description/}" />
+
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pic_scroll.js"></script>
+
+<!--coin-silider-->
+
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/templets/coin-slider/coin-slider.min.js"></script>
+
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/templets/coin-slider/coin-slider-styles.css" type="text/css" />
+
+<!--/coin-silider-->
+
+<script language="javascript" type="text/javascript">
+
+<!--
+
+	$(function(){
+
+		$("a[_for]").mouseover(function(){
+
+			$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+
+			$(this).addClass("thisclass").blur();
+
+			$("#"+$(this).attr("_for")).show();
+
+		});
+
+		//$("a[_for=uc_member]").mouseover();
+
+		$("a[_for=flink_1]").mouseover();
+
+	});
+
+	
+
+	function CheckLogin(){
+
+	  var taget_obj = document.getElementById('_userlogin');
+
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+
+	  DedeXHTTP = null;
+
+	}
+
+-->
+
+</script>
+
+</head>
+
+<body class="index">
+
+{dede:include filename="head.htm"/}
+
+<!-- /header -->
+
+<div class="w960 center clear mt1">
+
+<div id='slider'>  
+
+{dede:arclist flag='f' row='5' titlelen='60'}
+
+    <a href="[field:arcurl/]">  
+
+        <img src='[field:litpic/]' >  
+
+        <span>  
+
+         [field:title function='html2text(@me)'/]
+
+        </span>  
+
+    </a>
+
+{/dede:arclist}
+
+</div>
+
+<script type="text/javascript">  
+
+    $(document).ready(function() {  
+
+        $('#slider').coinslider({ width: 960, height:480, spw:7, sph:5, delay: 5000, sDelay:30, opacity:0.7, titleSpeed:500, effect:'random', navigation: true, links:true, hoverPause: true });
+
+    });
+
+</script>
+
+<!-- /coin-slider -->
+
+ <div class="pleft">
+
+  <div class="picnews">
+
+   <dl class="tbox light">
+
+    <dt class='light'><strong>Photo Gallery</strong></dt>
+
+    <dd class='light'>
+
+     <div class="infiniteCarousel">
+
+      <div class="wrapper">
+
+       <ul id='imgscroll'>
+
+        {dede:arclist row=10 orderby=pubdate type='image' channelid='2' titlelen='45' imgwidth='143' imgheight='106'}
+
+        <li><a href="[field:arcurl/]">[field:image/]<span class="title">[field:title /]</span></a></li>
+
+        {/dede:arclist}
+
+       </ul>
+
+      </div>
+
+     </div>
+
+    </dd>
+
+   </dl>
+
+  </div>
+
+  <!-- /picnews -->
+
+  <div class="listbox">
+
+   <dl class="tbox">
+
+    <dt><strong><a href="/a/Events/">Events</a></strong><span class="more"><a href="/a/Events/">More...</a></span></dt>
+
+    <dd>
+
+     <ul class="d1 ico3">
+
+      {dede:arclist titlelen='60' row='6' typeid='6'}
+
+      <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl /]">[field:title /]</a></li>
+
+      {/dede:arclist}
+
+     </ul>
+
+    </dd>
+
+   </dl>
+
+   <!-- /Events -->
+
+   <dl class="tbox">
+
+    <dt><strong><a href="/a/Columbia-China_Forum/">Columbia-China Forum</a></strong><span class="more"><a href="/a/Columbia-China_Forum/">More...</a></span></dt>
+
+    <dd>
+
+     <ul class="d1 ico3">
+
+      {dede:arclist titlelen='60' row='6' typeid='11'}
+
+      <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl /]">[field:title /]</a></li>
+
+      {/dede:arclist}
+
+     </ul>
+
+    </dd>
+
+   </dl>
+
+   <!-- /Columbia-China_Forum-->
+
+   <dl class="tbox">
+
+    <dt><strong><a href="/a/Career_Development/">Career Development</a></strong><span class="more"><a href="/a/Resources/">More...</a></span></dt>
+
+    <dd>
+
+     <ul class="d1 ico3">
+
+      {dede:arclist titlelen='60' row='6' typeid='9'}
+
+      <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl /]">[field:title /]</a></li>
+
+      {/dede:arclist}
+
+     </ul>
+
+    </dd>
+
+   </dl>
+
+   <!-- /Career_Development -->
+
+<!--
+
+   <dl class="tbox">
+
+    <dt><strong><a href="http://bbs.cuasia.org/">BBS</a></strong><span class="more"><a href="http://bbs.cuasia.org/">More...</a></span></dt>
+
+    <dd>
+
+<script type="text/javascript" src="http://bbs.cuasia.org/api.php?mod=js&bid=4"></script>
+
+    </dd>
+
+   </dl>
+
+-->
+
+   <!-- /BBS Forum -->
+
+  </div>
+
+  <!-- /listbox -->
+
+ </div>
+
+ <!-- /pleft -->
+
+ <div class="pright">
+
+  <div class="usercenter">
+
+   <dl class="tbox light">
+
+    <dt class='light'> <strong>My Account</strong></dt>
+
+    <dd id="uc_member" >
+
+       <div id="_userlogin">
+
+      <div class="userlogin">
+
+       <form name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
+
+        <input type="hidden" name="fmdo" value="login" />
+
+        <input type="hidden" name="dopost" value="login" />
+
+        <input type="hidden" name="keeptime" value="604800" />
+
+        <div class="fb"><span>User Name:</span>
+
+         <input type="text" name="userid" size="17" class="ipt-txt" />
+
+        </div>
+
+        <div class="fb"><span>Password:</span>
+
+         <input type="password" name="pwd" size="17" class="ipt-txt" />
+
+        </div>
+
+        {dede:php}
+
+        if(preg_match("#2#", $safe_gdopen))
+
+        {
+
+        echo '
+
+        <div class="fb"><span>Verification:</span>
+
+         <input type="text" name="vdcode" size="5" class="ipt-txt" />
+
+         <img id="vdimgck" align="absmiddle" onClick="this.src=this.s
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

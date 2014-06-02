@@ -1,0 +1,52 @@
+﻿#load
+{
+    width: 500px;
+    height: 11px;
+    border: 1px #82AF2C solid;
+}
+#loading
+{
+    width: 0%;
+    height: 11px;
+    background-color: #B4C96B;
+    overflow: hidden;
+}
+.green_font
+{
+    color: #669900;
+}
+#jieguo
+{
+    width: 500px;
+    color: #777;
+    height: 40px;
+    line-height: 40px;
+}
+#jieguo img
+{
+    float: left;
+    padding-right: 5px;
+}
+#flowme
+{
+    width:600px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    line-height: 22px;
+    border-width: 1px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-style: solid;
+    border-color: #707070 #CECECE #CECECE #707070;
+    vertical-align: middle;
+    color: #3c3c3c;
+}
+#flowme span
+{
+    color: #FF0000;
+}
+#flowme span.blue
+{
+    color: Blue;
+}

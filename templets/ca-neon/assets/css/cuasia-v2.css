@@ -1,0 +1,39 @@
+/*author:cuasia lbneon*/
+/*url:www.cuasia.org*/
+
+/*body { background-color: #283137; }*/
+body { background-image: url(../img/content-bg.gif); background-repeat: repeat; background-color: #f5f5f5; }
+.ca-navi{ background-color: #fff; width: 960px;  margin:0 auto; border: 0px solid #000; top: auto; bottom: 0px; }
+.ca-navright0{ width: 500px; height: 70px; border: 0px solid #ff0; top: auto; bottom: 0px; }
+.ca-navright1{ width: 120px; height: 20px; border: 0px solid #000; }
+.ca-navright2{ width: 500px; height: 20px; border: 0px solid #f00; }
+.ca-navright3{ width: 120px; height: 16px; border: 0px solid #000; }
+.ca-logo{ height: 80px; }
+.nav{ background-color: #1c86ee; border: 0px; }
+.nav a { color: #fff; }
+.nav a:hover { color: #1c86ee; }
+.ca-caret { border-bottom-color: #fff !important; border-top-color: #fff !important; }
+.ca-header { background-image: url(../img/body-bg.gif); background-repeat: repeat; background-color:#fff; width: 960px; height: 10px; margin:0 auto; border: 0px; padding:0; overflow:hidden;  }
+.ca-hspace { height: 15px; }
+.ca-fspace { min-height: 15px; }
+.ca-crl { background-image: url(../img/content-bg11.gif); background-repeat: repeat; background-color:#fff; margin-bottom: 0px; overflow:hidden; margin:0; margin: 0px; }
+.ca-title-row { border-bottom:1px solid #c9c9c9; }
+.ca-title-row a { color: #ccc; }
+.ca-title-row a:hover { color: #000; }
+.ca-list{ height:220px; }
+.ca-list20{ width:260px; float:left; margin: 2px auto; padding: 5px; }
+.ca-list60{ border-right:1px solid #c9c9c9; border-left:1px solid #c9c9c9; width:400px; float:left; margin: 2px auto; padding: 5px; }
+.ca-img-wrap{ padding:5px; }
+.ca-listp{ height:140px; }
+/*.cuCarousel { width: 600px; }*/
+.carousel img { width: 960px; }
+.ca-width960 { width: 960px; margin:0 auto;}
+.ca-bottom { background-image: url(../img/body-bg.gif); background-repeat: repeat; color: #fff; min-height: 160px; width: 960px; margin:0 auto; }
+.ca-bottom a{ color: #fff; }
+.ca-bottom-col1 { width: 200px; float:left; text-align:center; }
+.ca-bottom-col2 { width: 150px; float:left;}
+.ca-bottom-col3 { width: 400px; float:left;}
+.ca-container{ width: 960px; margin:0 auto; }
+.ca-contents { background-color: #fdfdfd; width: 960px; height: 550px; margin: 0 auto; }
+.carousel-indicators.middle { left: 0; right 0; top: auto; bottom: 15px; text-align:center;}
+.carousel-indicators.middle li { float: none; display: inline-block; }

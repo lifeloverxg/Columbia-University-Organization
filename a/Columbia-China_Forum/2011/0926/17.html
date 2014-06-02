@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Forum Overview-CUASIA</title>
+<meta name="keywords" content="Forum,Overview,Forum,Overview," />
+<meta name="description" content=" The past three decades witnessed China’s remarkable progress in economic development and steadily increasing influence on the global geopolitical stage. As the nation currently enters a new era with a mission of applying the scientific ou" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body class="articleview">
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time"></span>
+     <div class="toplinks"><a href="/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="/data/sitemap.html" target="_blank">网站地图</a>|<a href="/tags.php">TAG标签</a><a href="/data/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.cuasia.org');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('http://www.cuasia.org','CUASIA')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+//保存邮件地址
+function saveMailingList(mail,tip)
+{
+	var taget_obj = document.getElementById(tip);
+	var email = document.getElementById(mail).value;
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+	DedeXHTTP = null;
+}
+</script>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="http://www.cuasia.org"><img src="/templets/default/images/logo.gif" alt="CUASIA"/></a> </h1>
+      </div>
+      <div class="right-bar">
+<div class="mailinglist">
+<h4>Join US:</h4>
+<input name="email" id="email" size="10" type="text" class="email-input"  value="Enter your Email to Join US..." onfocus="if(this.value=='Enter your Email to Join US...'){this.value='';}"  onblur="if(this.value==''){this.value='Enter your Email to Join Us...';}" />
+<button type="button" class="mailinglist-submit" onclick="javascript:saveMailingList('email','mail-tip');">Submit</button>
+<span id="mail-tip">To receive updated event info.</span>
+</div>
+<!-- //mailinglist -->
+<div class="top-search">
+  <form  name="formsearch" action="/plus/search.php">
+    <div class="form">
+      <h4>Search</h4>
+       <input type="hidden" name="kwtype" value="0" />
+       <input type="hidden" name="searchtype" value="titlekeyword" />
+       <input name="q" type="text" class="search-keyword" id="search-keyword" value="Search here..." onfocus="if(this.value=='Search here...'){this.value='';}"  onblur="if(this.value==''){this.value='Search here...';}" />
+      <button type="submit" class="top-search-submit">Search</button>
+    </div>
+    </form>
+    <div class="top-tags">
+      <h4>Tags:</h4>
+      <ul>
+      
+        <li><a href='/tags.php?/%E5%A5%B3%E6%80%A7/'>女性</a></li>
+      
+        <li><a href='/tags.php?/%E6%81%8B%E7%88%B1/'>恋爱</a></li>
+      
+        <li><a href='/tags.php?/%E5%91%BD%E6%A1%88/'>命案</a></li>
+      
+        <li><a href='/tags.php?/%E6%B6%89%E5%AB%8C%E8%BD%AE%E5%A5%B8/'>涉嫌轮奸</a></li>
+      
+        <li><a href='/tags.php?/%E8%93%9D%E5%8F%AF%E5%84%BF/'>蓝可儿</a></li>
+      
+        <li><a href='/tags.php?/%E5%87%BA%E5%9B%BD/'>出国</a></li>
+      
+        <li><a href='/tags.php?/%E4%BC%98%E6%83%A0%E5%8D%B7/'>优惠卷</a></li>
+      
+        <li><a href='/tags.php?/%E6%9D%8E%E5%8F%8C%E6%B1%9F/'>李双江</a></li>
+      
+        <li><a href='/tags.php?/%E4%B8%AD%E5%9B%BD%E4%BA%BA/'>中国人</a></li>
+      
+        <li><a href='/tags.php?/%E6%9D%8E%E5%A4%A9%E4%B8%80/'>李天一</a></li>
+      
+      </ul>
+    </div>
+</div>
+<!-- //top-search -->
+      </div>
+	</div><!-- //top -->
+	<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+  	<div class="t_l"></div>
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>Home</span></a></li>
+      	
+      	<li><a href='/a/About/About_US/'  rel='dropmenu10'><span>About us_old</span></a></li>
+      	
+      	<li><a href='/a/Forums1/'  rel='dropmenu15'><span>Forums_old</span></a></li>
+      	
+      	<li><a href='/a/Events/'  rel='dropmenu20'><span>Events_old</span></a></li>
+      	
+      	<li><a href='/Team/' ><span>Team_old</span></a></li>
+      	
+      	<li><a href='/Contact_US/' ><span>Contact US_old</span></a></li>
+      	
+    	</ul>
+    </div>
+  	<div class="t_r"></div>
+<!-- //search -->
+		</div>
+	</div>
+</div><!-- //header -->
+<!-- /header -->
+<div class="w960 center clear mt1">
+<div class="pleft">
+ <div class="place"> <strong>当前位置:</strong> <a href='http://www.cuasia.org/'>Home</a> > <a href='/a/Forums1/'>Forums_old</a> > <a href='/a/Columbia-China_Forum/'>Columbia-China Forum</a> >  </div>
+ <!-- /place -->
+ <div class="viewbox">
+  <div class="title">
+   <h2>Forum Overview</h2>
+  </div>
+  <!-- /title -->
+  <div class="info"> <small>时间:</small>2008-03-05 11:43<small>来源:</small>未知 <small>作者:</small>RainnieZhou <small>点击:</small>
+   <script src="/plus/count.php?view=yes&aid=17&mid=0" type='text/javascript' language="javascript"></script>
+   次</div>
+  <!-- /info -->
+  
+  <div class="intro"> The past three decades witnessed China’s remarkable progress in economic development and steadily increasing influence on the global geopolitical stage. As the nation currently enters a new era with a mission of applying the scientific ou</div>
+  
+  <div class="content">
+   <table width='100%'>
+    <tr>
+     <td><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top;"></div>
+      <p>
+	&nbsp;</p>
+<p>
+	Forum Overview</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;The past three decades witnessed China&rsquo;s remarkable progress in economic development and steadily increasing influence on the global geopolitical stage. As the nation currently enters a new era with a mission of applying the scientific outlook on development and building a &ldquo;harmonious society&rdquo;, many crucial questions remain to be solved, such as how China&rsquo;s economic miracle can sustain itself and what the next steps of China&rsquo;s economic system reform should be.</p>
+<p>
+	&nbsp;</p>
+<p>
+	The China Development Forum will gather leaders and experts from China and the Unites States at Columbia University in 2008. The participants will share their ideas about China&rsquo;s development and the global economy, review the changes in Chinese business environment, and explore the opportunities for China&rsquo;s foreign partners. Using the framework of the USA-China Strategic Economic Dialogue and the 17th National Party Congress, these experts and leaders will direct thought-provoking discussions about the ever-changing status of USA-China collaborative relations in economy, society, health and culture.</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;过去三十年中国卓越的经济发展持续地影响全球性地缘政治。当国家正在进入一个建立&ldquo;和谐社会&rdquo;为使命的新的时代，许多关键的问题留待去解决，包括中国的经济奇迹怎样持续发展以及中国下一步的改革应该是什么。</p>
+<p>
+	&nbsp;</p>
+<p>
+	2009中国发展论坛汇集来自中美领导和专家于哥伦比亚大学。参加者将分享他们关于中国的发展和全球性经济的想法，回顾中国商业环境的变化，并且探索中国与国外合 作的机会。这些专家和领导将引导中美在经济、社会、健康和文化方面加强合作进行令人深思的讨论。论坛包括主要演讲、公开讨论等。</p>
+<p>
+	&nbsp;</p>
+<p>
+	Format</p>
+<p>
+	&nbsp;</p>
+<p>
+	The forum consists of a series of ongoing distinguished lectures and panel discussions throughout the year. The areas of focus encompass economic, political, social, cultural, environmental, and many other important issues.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Organizers</p>
+<p>
+	&nbsp;</p>
+<p>
+	The China Development Forum is an initiative of Columbia University Asia-Pacific Development Society (CUASIA). Our events are supported by many Columbia University schools and departments, such as the Graduate School of Arts and Science, the Graduate School of Business, School of International and Public Affairs, The Jerome A. Chazen Institued of International Business in Columbia Business School, the Weatherhead East Asian Institute. We also receive co-sponsorship from other prominent on-campus and off-campus partners.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Individual Volunteers</p>
+<p>
+	&nbsp;</p>
+<p>
+	If you wish to work as a volunteer for the forum, please email owner-cuasia@columbia.edu with your basic profile or CV. Experience is helpful but passion and the desire to serve the community are more important.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Corporate</p>
+<p>
+	&nbsp;</p>
+<p>
+	Corporate sponsorship is very welcomed. Please contact us for more details.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Inquiries</p>
+<p>
+	&nbsp;</p>
+<p>
+	Please direct your inquiries to owner-cuasia@columbia.edu</p>
+<p>
+	&nbsp;</p>
+<p>
+	Topics of the forum</p>
+<p>
+	&nbsp;</p>
+<p>
+	Balancing the Chinese economy</p>
+<p>
+	&nbsp;</p>
+<p>
+	China has become a global economic power over in recent decades. However, the downside of the economic boom has loomed largely due to the unequal regional development and environmental issues, etc. The dizzyingly rapid growth is most noticeable in China&rsquo;s urban part, while the western region lags far behind the costal and central areas. The development imbalance also lies in the composition of China&rsquo;s GDP which is heavily tilted toward investment and net exports while the domestic consumption remains low. Rectifying these imbalances in a huge country like China will require not only governmental regulation, but also the participation from numerous Chinese and overseas business and the Chinese people. How should China work towards solving these imbalance problems?</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国经济的平衡发展</p>
+<p>
+	&nbsp;</p>
+<p>
+	在过去几十年里中国已经成为全球经济的主导力量。然而，繁荣发展后的中国经济已呈现下行趋势。这主要归因于中国经济的不平衡发展和环境退化等问题。为世界所称奇的高速经济发展主要集中在中国的城镇地区。而中国的西部地区则远远落后于东部沿海地区和中部地区。同时，经常项目和资本项目持续双顺差以及投资和消费关系不协调也是造成经济不平衡发展的原因。整顿类似于中国这样一个大国的经济发展不平衡问题将不仅要求政府战略方针的调整，也要求国内外企业和中国人民的积极参与。中国将如何解决这些经济发展的不平衡问题？</p>
+<p>
+	&nbsp;</p>
+<p>
+	Development and Regulation for China&#39;s Financial System</p>
+<p>
+	&nbsp;</p>
+<p>
+	The Chinese government has paid much attention to regulate the financial industry to keep away financial risk and safeguard the stability of the financial system. However, as enhancement of economic and financial globalization takes place in China, how can the Chinese government and major financial players construct and perfect the current framework? On the banking side, China has undergone significant changes in the last two decades and banks are now much more like their Western counterparts. With the IPOs of the four state commercial banks, and the increase in number of foreign strategic equity stakes in Chinese banks, domestic and foreign investors have fostered much hope in and speculation about Chinese banks and the financial system as a whole. Compounded with the complexity of China&#39;s currency policy and the importance of raising interest rates, government regulators must take all factors and effects into consideration when implementing new changes to ensure stable growth amidst China&#39;s gradual integration into the world.</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国金融体系的发展与规范化</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国政府已经投入很大精力整顿规范金融市场，以防止金融风险确保金融体系的稳定性。然而随着经济金融全球化的不断发展，中国政府和主要的金融投资者如何能够构建和完善当前的结构？在银行业方面，中国在过去二三十年中发生了巨大的变化。现在中国的银行越发类似于西方银行。随着中国四大商业银行的上市，以及国外大型策略性投资者的增加，中国国内和国外的投资者对中国的银行业和整个金融体系都报以极大的期望甚至追捧。针对中国货币政策的复杂性和利率浮动的重要性，中国政府管理者在执行新的改革方针时必须考虑一切因素和影响。以确保中国经济在全球一体化过渡时期能够持续稳定增长。</p>
+<p>
+	&nbsp;</p>
+<p>
+	Energy Concerns, Foreign Buyouts and National Economic Security</p>
+<p>
+	&nbsp;</p>
+<p>
+	China has surpassed Japan to become the second largest consumer and importer of crude oil in the world. Its voracious consumption of energy of all kinds in the past few years, coupled with volatility in OPEC countries, has raised concerns about the sustainability of its economic growth. As oil supplies remain stagnant, rising demand drives up prices in the international market. The shortage that ensues has forced some factories to shut down occasionally. Moreover, the sharp spike in China&#39;s demand for oil comes at a time when coal, the traditional pillar of China&#39;s energy consumption structure, is already straining from shortage problems. China&#39;s appetite for energy shows no sign of abating as its economy is increasingly anchored by energy-intensive industries. Yet, energy-saving measures, while high on the agenda of the government, cannot be instituted soon enough to alleviate the pressure on the international energy market. China attempts to shield its economy from the vicissitudes of the open market by stepping up exploration projects, buying shares in foreign oil fields and pipelines, and locking up energy resources from governments shunned by the West. The panel will also address energy security, a new subject in Chinese strategic thinking. Attempts at securing additional sources of oil and establishing a strategic reserve have had a mixed record of successes and failures.</p>
+<p>
+	&nbsp;</p>
+<p>
+	能源，外汇储备和中国的经济安全性</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国已经超越日本成为世界上第二大原油消费国和原油进口国。在过去几年内伴随着石油输出国组织的反复无常，中国对各类石油产品的消耗几近贪婪的程度。这引起更多对中国经济增长可持续性的关注。当石油供给处于停滞局面时，保持增长态势的石油需求必然驱动国际市场原油价格的上涨。由此引发的原油不足已经迫使一些工厂不时停业。在中国对原油需求急剧增加的同时，中国传统能源煤的供给同样面临困境。如果考虑到中国当前能源高消耗型工业为主导的经济模式，就不难理解中国对能源的巨大需求。尽管中国政府大力提倡节约能源，相关的措施却不可能足够快地被执行，这也就不能缓和对当下世界原油市场的压力。中国试图通过加快开发项目，投资国际原油生产地，突破西方的能源封锁，来保护自身经济不会面临开放市场的衰败结果。中国政府需要思考的一个新的战略性议题，能源安全的问题，也将在本次讨论中涉及。中国在确保原油来源和建立原油战略储备方面的尝试，既有成功也有失败的记录。</p>
+<p>
+	&nbsp;</p>
+<p>
+	Entrepreneurship, Technological Innovation &amp; PE / VC in China</p>
+<p>
+	&nbsp;</p>
+<p>
+	China&rsquo;s private equity sector is growing quickly, and more capital is flowing into country while domestic A-share capital markets are booming. Some of the biggest and most powerful dealmakers in the United States have found a way to keep the buyout boom going: by aggressively pushing into China while buyouts were slowing in the United States because of turmoil in the credit markets. How does this rapid change affect foreign firms investing in China? Where are the best opportunities for investment? How is this booming market affecting both local and foreign investors? Are Chinese private equity firms and hedge funds challenging foreign entities?</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国的企业家，技术革新，私有产权和风险资本</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国的私募基金正飞速增长，更多的资本流入国内，国内的A 股交易市场持续兴旺。美国一些最大，最具竞争力的交易中间人已经找到了如何让收购投资持续繁荣的途径：在美国的收购投资因为信贷市场的动荡而减缓之时，大力积极地进军中国市场。这一系列巨大的变化是如何影响外国公司的在华投资？当下最好的投资机遇在何方？繁荣的交易市场在如何影响国内国外的投资者？中国的私募基金和对冲基金能否对国外的企业和基金构成挑战？</p>
+<p>
+	&nbsp;</p>
+<p>
+	Media and Advertisement Market in China</p>
+<p>
+	&nbsp;</p>
+<p>
+	China has one of the most interesting, baffling, and promising media markets in the world. Advertising market in China keeps growing 40% year-on-year, estimated market size is now 13-20 billion US dollars. TV and print are the biggest, radio and magazine are growing and interactive media is seen as new opportunity. To be sure the media regulatory environment has changed profoundly in the last five years and a lot of foreign investors have benefited. However, the media landscape is much more complicated than that of other consumer goods. Apart from the ownership of editorial content, the other biggest obstacle to foreign investment is the arcane distribution system. But the good news is that the General Administration of Press and Publication (GAPP) announced in October that 13 Chinese media companies would be listed on the stock market by end of 2007. Those newspapers that might be able to list its shares on stock markets will have to be individual enterprise rather than the traditional newspaper publishers. The marvelous impact on China&#39;s media industry is truly to be expected. As for Chinese media companies, would this be more opportunity or challenge? For those who have already established their brand in China&rsquo;s market, such as Star TV, Caijing magazine, how would they see their next few years in China&rsquo;s market, regarding generating their ads revenue? How would new foreign investors take this opportunity to start make their first movement?</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国的传媒广告市场</p>
+<p>
+	&nbsp;</p>
+<p>
+	中国拥有一个全世界最有趣，最令人困惑和最有前途的传媒市场。中国的广告业年增长率达40% ，预估现今市场价值约130-200 亿美元。电视和出版物依旧占据最大份额，广播和杂志份额正持续增长，与此同时互动媒体成为新的潮流。毫无疑问，在过去的五年中，媒体规管环境发生了深刻的变化，许多国外投资者从中受益。 然而，媒体行业较之其他消费行业更为复杂。除了社论内容归属问题，国外投资者面临的另一个巨大的阻碍是神秘的发布系统。 令人振奋的是就在今年十月出版总署宣布中国的13 家传媒公司将于2007 年底集体上市。能够在股市上公布其份额的那些报纸将必须是个人企业而不是传统新闻社。这一举动对中国传媒市场产生的影响将非常令人期待。对于中国的传媒公司，这是机遇还是挑战？对于哪些已经成功在中国市场树立起品牌的公司，比如Star TV, 财经杂志，他们会如何看待未来几年在中国市场创造广告收入的机会？新的国外投资者将如何把握这次机遇，迈出他们的第一步？</p>
+
+      
+      (责任编辑：admin)</td>
+    </tr>
+   </table>
+  </div>
+  <!-- /content -->
+  <div class="dede_pages">
+   <ul class="pagelist">
+    
+   </ul>
+  </div>
+  <!-- /pages -->
+  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',17)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',17)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(17);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <!-- //分享代码开始 -->
+  
+  <!-- //分享代码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：没有了 </li>
+     <li>下一篇：<a href='/a/Columbia-China_Forum/2011/0926/18.html'>The Development of Chinese Financial Market: the Transition,</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <div class="actbox">
+    <ul>
+     <li id="act-fav"><a href="/plus/stow.php?aid=17" target="_blank">收藏</a></li>
+     <li id="act-err"><a href="/plus/erraddsave.php?aid=17&title=Forum Overview" target="_blank">挑错</a></li>
+     <li id="act-pus"><a href="/plus/recommend.php?aid=17" target="_blank">推荐</a></li>
+     <li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+    </ul>
+   </div>
+   <!-- /actbox -->
+  </div>
+  <!-- /handle -->
+ </div>
+ <!-- /viewbox -->
+ <!-- //AJAX评论区 -->
+ <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1">
+		<dl class="tbox">
+			<dt>
+				<strong>发表评论</strong>
+				<span class="more"></span>
+			</dt>
+			<dd>
+				<div class="dede_comment_post">
+          <form action="#" method="post" name="feedback">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="17" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <div class="dcmp-title">
+						<small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small>
+					</div><!-- /dcmp-title -->
+					<div class="dcmp-stand">
+						<strong>评价:</strong>
+							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="/templets/default/images/cmt-neu.gif" />中立</label>
+							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="/templets/default/images/cmt-good.gif" />好评</label>
+							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="/templets/default/images/cmt-bad.gif" />差评</label>
+					</div><!-- /dcmp-stand -->
+                    <div class="clr"></div>
+                    <div class="dcmp-mood">
+						<strong>表情:</strong>
+						<ul>            
+								<li><input type="radio" name="face" value="1" checked="1" /><img src="/templets/default/images/mood/ico-mood-1.gif" /></li><li><input type="radio" name="face" value="2" /><img src="/templets/default/images/mood/ico-mood-2.gif" /></li><li><input type="radio" name="face" value="3" /><img src="/templets/default/images/mood/ico-mood-3.gif" /></li><li><input type="radio" name="face" value="4" /><img src="/templets/default/images/mood/ico-mood-4.gif" /></li><li><input type="radio" name="face" value="5" /><img src="/templets/default/images/mood/ico-mood-5.gif" /></li><li><input type="radio" name="face" value="6" /><img src="/templets/default/images/mood/ico-mood-6.gif" /></li><li><input type="radio" name="face" value="7" /><img src="/templets/default/images/mood/ico-mood-7.gif" /></li><li><input type="radio" name="face" value="8" /><img src="/templets/default/images/mood/ico-mood-8.gif" /></li><li><input type="radio" name="face" value="9" /><img src="/templets/default/images/mood/ico-mood-9.gif" /></li><li><input type="radio" name="face" value="10" /><img src="/templets/default/images/mood/ico-mood-10.gif" /></li><li><input type="radio" name="face" value="11" /><img src="/templets/default/images/mood/ico-mood-11.gif" /></li>                   
+						</ul>
+					</div><!-- /dcmp-mood -->
+					<div class="dcmp-content">
+						<textarea cols="60" name="msg" rows="5" class="ipt-txt"></textarea>
+					</div><!-- /dcmp-content -->
+					<div class="dcmp-post"><!--未登陆-->
+							<div class="dcmp-userinfo" id="_ajax_feedback">
+								用户名:<input type="text" name="username" size="16" class="ipt-txt" style="text-transform: uppercase;"/>
+                                验证码:<input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/><img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片" />
+                <input type="checkbox" name="notuser" id="dcmp-submit-guest" /><label for="dcmp-submit-guest" />匿名? </label>
+							</div>
+              <script language="javascript" type="text/javascript">CheckLogin();</script>
+							<div class="dcmp-submit">
+								<button type="button" onClick='PostComment()'>发表评论</button>
+							</div>
+						</div>
+        </form>
+				</div>
+			</dd>
+		</dl>
+	</div><!-- //评论表单区结束 -->
+
+<!-- //评论内容区 -->
+	<a name='commettop'></a>
+	<div class="mt1">
+			<dl class="tbox">
+				<dt>
+					<strong>最新评论</strong>
+					<span class="more"><a href="/plus/feedback.php?aid=17">进入详细评论页&gt;&gt;</a></span>
+				</dt>
+				<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+				<dd id='commetcontentNew'></dd>
+				<dd id='commetcontent'></dd>
+			</dl>
+	</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=17&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '17');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script><!-- //评论内容区结束 -->
+ </div>
+<!-- //左边内容结束 -->
+<!-- //右边内容开始 -->
+<div class="pright"> 
+ <div class="pright">
+  <div class="commend mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>推荐内容</strong></dt>
+    <dd class='light'>
+     <ul class="d4">
+      <li><a href="/a/Columbia-China_Forum/2011/0926/22.html">Innovation Works: Capturing China Internet </a>
+       <p>The Chinese Internet has evolved into a new era. During this new era, opportuniti...</p>
+      </li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/21.html">百度总裁 李彦宏先生哥伦比亚大学</a>
+       <p>时逢中华人民共和国成立六十周年，中国经济继续迅速稳健发展...</p>
+      </li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/19.html">The Impacts of Financial Crisis on China</a>
+       <p>Mr. Ding Wei is Executive Chairman of Corporate Finance Committee of CICC. Mr. Di...</p>
+      </li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/20.html">The Challenges of China’s Banking Reform</a>
+       <p>Dr. JIANG Jianqing is the Chairman and President of Industrial and Commercial Ban...</p>
+      </li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/18.html">The Development of Chinese Financial Market</a>
+       <p>Mr. Ma Weihua is the President and CEO of China Merchants Bank (CMB). Mr. Ma will...</p>
+      </li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/17.html">Forum Overview</a>
+       <p> The past three decades witnessed China’s remarkable progress in economic devel...</p>
+      </li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <!-- /commend -->
+  <div class="hot mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>热点内容</strong></dt>
+    <dd class='light'>
+     <ul class="c1 ico2">
+      <li><a href="/a/Columbia-China_Forum/2011/0926/21.html">百度总裁 李彦宏先生哥伦</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/22.html">Innovation Works: Capturing Chi</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/20.html">The Challenges of China’s Ban</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/19.html">The Impacts of Financial Crisis</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/18.html">The Development of Chinese Fina</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/17.html">Forum Overview</a></li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="contentRtPicAD2" style="margin:10px auto"></div>
+ </div>
+ <!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"></div>
+    <div class="footer_left"></div>
+    <div class="footer_body">
+    	    <div class="b-links">
+<a href="http://www.facebook.com/cuasia?ref=ts" target="_blank"><img src="/uploads/flink/facebook.png"/></a>
+<a href="http://twitter.com/#!/CU_ASIA" target="_blank"><img src="/uploads/flink/twitte.png"/></a>
+<a href="http://weibo.com/2296416574" target="_blank"><img src="/uploads/flink/sina.png"/></a>
+<a href="http://www.renren.com" target="_blank"><img src="/uploads/flink/renren.png"/></a>
+</div>
+    		<div class="powered">
+		Powered by <a href="http://www.cuasia.org" title="哥伦比亚大学亚太发展协会。" target="_blank"><strong>CUASIA CMS V57_UTF8_SP1</strong></a> © 2011-2015 <a href="http://bbs.cuasia.org/" target="_blank">CUASIA</a> Forum.<br />
+		<div class="copyright">Copyright &copy; 2011-2012 CUASIA. All Rights Reserved CUASIA   </div>
+		</div>
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+<!-- /footer -->
+</body>
+</html>
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

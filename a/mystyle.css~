@@ -1,0 +1,117 @@
+ul, li{margin:0; border:0; padding:0; list-style:none;}
+#middlebar{
+font-size:11px;
+color:#3b5d14;
+background:#2873c2;
+font-weight:bold;
+padding:4px;
+height:30px;
+}
+#middlebar .menu li {
+height:30px;
+float:left;
+margin-right:10px;
+}
+#middlebar .menu li a{
+color:#ffffff;
+text-decoration:none;
+padding:0 10px;
+height:30px;
+line-height:30px;
+display:block;
+float:left;
+padding:0 26px 0 10px;
+}
+#middlebar .menu li a:hover{
+color:#666666;
+}
+/*
+#middlebar ul .submenu {
+border:solid 1px #c9dea1;
+border-top:none;
+background:#FFFFFF;
+position:absolute;
+top:148px;
+width:150px;
+padding:6px 0;
+clear:both;
+z-index:2;
+display:none;
+}*/
+
+#aboutlist {
+border:solid 1px #2873c2;
+border-top:none;
+background:#FFFFFF;
+position:absolute;
+//top:148px;
+//left:140px;
+width:150px;
+padding:6px 0;
+clear:both;
+z-index:2;
+opacity:0.6;
+filter:alpha(opacity=60); /* For IE8 and earlier */
+display:none;
+margin-top: 30px;
+}
+
+
+#forumslist {
+border:solid 1px #2873c2;
+border-top:none;
+background:#FFFFFF;
+position:absolute;
+//top:148px;
+//left:245px;
+width:150px;
+padding:6px 0;
+clear:both;
+z-index:2;
+opacity:0.6;
+filter:alpha(opacity=60); /* For IE8 and earlier */
+display:none;
+margin-top: 30px;
+}
+
+#eventslist {
+border:solid 1px #2873c2;
+border-top:none;
+background:#FFFFFF;
+position:absolute;
+//top:148px;
+//left:340px;
+width:150px;
+padding:6px 0;
+clear:both;
+z-index:2;
+opacity:0.6;
+filter:alpha(opacity=60); /* For IE8 and earlier */
+display:none;
+margin-top:30px;
+}
+
+#middlebar ul .submenu li{
+background:none;
+display:block;
+float:none;
+margin:0 6px;
+border:0;
+height:auto;
+line-height:normal;
+border-top:solid 1px #DEDEDE;
+}
+#middlebar .submenu li a{
+background:none;
+display:block;
+float:none;
+padding:6px 6px;
+margin:0;
+border:0;
+height:auto;
+color:#105cbe;
+line-height:normal;
+}
+#middlebar .submenu li a:hover{
+background:#e3edef;
+}

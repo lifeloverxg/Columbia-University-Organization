@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CU-Asia 2013</title>
+    <!--<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content=" CU-Asia（www.cuasia.org）是一个经哥伦比亚大学认可的校园组织，致力于促进美国和亚太地区（特别是大中华地区）之间的相互了解和文化交流。在过去多种多样的活动中，我们最为知名的就是举办多场精彩、高规格的讲座和演出。最近几年我们邀请或联合邀请的名人包括：前谷歌中国总裁李开复博士，百度总裁李彦宏先生，诺贝尔经济学奖得主约瑟夫*斯蒂格利茨博士，中国驻纽约总领馆总领事孙国祥大使，工商银行董事长姜建清博士，导演姜文，钢琴演奏家郎朗，表演艺术家姜昆、唐国强、张铁林等等。" name="description">
+    <meta content="CU-Asia哥伦比亚大学亚太发展协会" name="author">
+    <meta content="CU-Asia,Columbia University,CU,CUAsia,哥伦比亚大学,亚太发展协会" name="keywords">
+    <meta content="index,follow" name="robots">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/assets/css/cuasia-v3.css" rel="stylesheet">
+  </head>
+  <body>
+
+  {dede:include filename="./ca-neon/head.htm"/}
+
+    <div class="ca-width960 ca-crl">
+      <div class="ca-hspace"></div>
+      <div id="cacarousel" class="ca-box-shadow carousel slide">
+        <ol class="carousel-indicators middle">
+          <li data-target="#cacarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#cacarousel" data-slide-to="1" class=""></li>
+          <li data-target="#cacarousel" data-slide-to="2" class=""></li>
+          <li data-target="#cacarousel" data-slide-to="3" class=""></li>
+          <li data-target="#cacarousel" data-slide-to="4" class=""></li>
+        </ol>
+        <div class="carousel-inner" >
+        {dede:arclist titlelen=100 flag='f' row='1'}
+          <div class="item active">
+            <img src="[field:litpic/]" alt="">
+            <div class="carousel-caption">
+              <h4>[field:title]</h4>
+              <p>[field:description function='cn_substr(@me,220)'/]...</p>
+              <a class="btn btn-large btn-primary" href="[field:arcurl/]">More</a>
+            </div>
+          </div>
+          {/dede:arclist}
+          {dede:arclist titlelen=100 flag='f' limit='1,4'}
+          <div class="item">
+            <img src="[field:litpic/]" alt="">
+            <div class="carousel-caption">
+              <h4>[field:title/]</h4>
+              <p>[field:description function='cn_substr(@me,220)'/]...</p>
+              <a class="btn btn-large btn-primary" href="[field:arcurl/]">More</a>
+            </div>
+          </div>
+          {/dede:arclist}
+        </div>
+        <a class="left carousel-control" href="#cacarousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#cacarousel" data-slide="next">›</a>
+      </div>
+    </div>
+
+    <div class="ca-contents">
+      <div class="ca-hspace"></div>
+      <div class="ca-list20">
+        <h3 class="ca-title-row">
+          Newsletter
+          <a href="http://www.cuasia.org/a/ca_newsletters/" class="pull-right">More..</a>
+        </h3>
+          {dede:arclist typeid=29 titlelen=36 row=5 orderby='id' orderway='desc'}
+          <div class="ca-list">
+            <a href="[field:arcurl/]" class="ca-head"><h4>[field:title/]</h4></a>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+          </div>
+          {/dede:arclist}
+      </div>
+      <div class="ca-list60">
+        <h3 class="ca-title-row">
+          Featured Events
+          <a href="http://www.cuasia.org/a/ca_events/" class="pull-right">More..</a>
+        </h3>
+          {dede:arclist typeid=27 titlelen=56 row=5 orderby='id' orderway='desc'}
+          <div class="ca-list">
+            <a href="[field:arcurl/]" class="ca-head"><h4>[field:title/]</h4></a>
+            <p class="ca-listp">[field:description function='cn_substr(@me,750)'/]...</p>
+          </div>
+          {/dede:arclist}
+      </div>
+      <div class="ca-list20 middle">
+        <h3 class="ca-title-row">
+          Photo Gallery
+          <a href="http://www.cuasia.org/a/ca_gallery/" class="pull-right">More..</a>
+        </h3>
+          {dede:arclist typeid=28 row=5 orderby='id' orderway='desc'}
+          <div class="ca-listi">
+            <img class="ca-gallery-img img-rounded img-polaroid" src="[field:litpic/]" class="ca-gallery-img"></img>
+            <a href="[field:arcurl/]" class="ca-head"><h4>[field:title/]</h4></a>
+          </div>
+          {/dede:arclist}
+      </div>
+    </div>
+
+    {dede:include filename="./ca-neon/footer.htm"/}
+
+    <script>
+        $('.carousel').carousel({
+            interval: 4000
+        })
+    </script>
+  </body>
+</html>
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

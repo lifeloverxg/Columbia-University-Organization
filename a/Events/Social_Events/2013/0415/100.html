@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>哥大亚太发展协会3v3篮球赛火热进行中！-CUASIA</title>
+<meta name="keywords" content="哥大,亚太发,展协,会,3v3,篮球,赛火,热进行,中," />
+<meta name="description" content="为了丰富校园生活，在学习之余帮助同学们强身健体。哥伦比亚大学亚太发展协会，将于4月27日晚4点至7点在学校Levien Gym举办哥大校园3v3篮球友谊赛。" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body class="articleview">
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time"></span>
+     <div class="toplinks"><a href="/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="/data/sitemap.html" target="_blank">网站地图</a>|<a href="/tags.php">TAG标签</a><a href="/data/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.cuasia.org');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('http://www.cuasia.org','CUASIA')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+//保存邮件地址
+function saveMailingList(mail,tip)
+{
+	var taget_obj = document.getElementById(tip);
+	var email = document.getElementById(mail).value;
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+	DedeXHTTP = null;
+}
+</script>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="http://www.cuasia.org"><img src="/templets/default/images/logo.gif" alt="CUASIA"/></a> </h1>
+      </div>
+      <div class="right-bar">
+<div class="mailinglist">
+<h4>Join US:</h4>
+<input name="email" id="email" size="10" type="text" class="email-input"  value="Enter your Email to Join US..." onfocus="if(this.value=='Enter your Email to Join US...'){this.value='';}"  onblur="if(this.value==''){this.value='Enter your Email to Join Us...';}" />
+<button type="button" class="mailinglist-submit" onclick="javascript:saveMailingList('email','mail-tip');">Submit</button>
+<span id="mail-tip">To receive updated event info.</span>
+</div>
+<!-- //mailinglist -->
+<div class="top-search">
+  <form  name="formsearch" action="/plus/search.php">
+    <div class="form">
+      <h4>Search</h4>
+       <input type="hidden" name="kwtype" value="0" />
+       <input type="hidden" name="searchtype" value="titlekeyword" />
+       <input name="q" type="text" class="search-keyword" id="search-keyword" value="Search here..." onfocus="if(this.value=='Search here...'){this.value='';}"  onblur="if(this.value==''){this.value='Search here...';}" />
+      <button type="submit" class="top-search-submit">Search</button>
+    </div>
+    </form>
+    <div class="top-tags">
+      <h4>Tags:</h4>
+      <ul>
+      
+        <li><a href='/tags.php?/%E6%9D%8E%E5%8F%8C%E6%B1%9F/'>李双江</a></li>
+      
+        <li><a href='/tags.php?/%E5%91%BD%E6%A1%88/'>命案</a></li>
+      
+        <li><a href='/tags.php?/%E5%A5%B3%E6%80%A7/'>女性</a></li>
+      
+        <li><a href='/tags.php?/%E4%BC%98%E6%83%A0%E5%8D%B7/'>优惠卷</a></li>
+      
+        <li><a href='/tags.php?/%E6%9D%8E%E5%A4%A9%E4%B8%80/'>李天一</a></li>
+      
+        <li><a href='/tags.php?/%E6%B6%89%E5%AB%8C%E8%BD%AE%E5%A5%B8/'>涉嫌轮奸</a></li>
+      
+        <li><a href='/tags.php?/%E6%81%8B%E7%88%B1/'>恋爱</a></li>
+      
+        <li><a href='/tags.php?/%E8%93%9D%E5%8F%AF%E5%84%BF/'>蓝可儿</a></li>
+      
+        <li><a href='/tags.php?/%E6%9D%8E%E5%AE%89/'>李安</a></li>
+      
+        <li><a href='/tags.php?/%E5%87%BA%E5%9B%BD/'>出国</a></li>
+      
+      </ul>
+    </div>
+</div>
+<!-- //top-search -->
+      </div>
+	</div><!-- //top -->
+	<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+  	<div class="t_l"></div>
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>Home</span></a></li>
+      	
+      	<li><a href='/a/About/About_US/'  rel='dropmenu10'><span>About us</span></a></li>
+      	
+      	<li><a href='/a/Forums1/'  rel='dropmenu15'><span>Forums</span></a></li>
+      	<li class='hover'><a href='/a/Events/'  rel='dropmenu20'><span>Events</span></a></li>
+      	<li><a href='/Team/' ><span>Team</span></a></li>
+      	
+      	<li><a href='/Contact_US/' ><span>Contact US</span></a></li>
+      	
+    	</ul>
+    </div>
+  	<div class="t_r"></div>
+<!-- //search -->
+		</div>
+	</div>
+</div><!-- //header -->
+<!-- /header -->
+<div class="w960 center clear mt1">
+<div class="pleft">
+ <div class="place"> <strong>当前位置:</strong> <a href='http://www.cuasia.org/'>Home</a> > <a href='/a/Events/'>Events</a> > <a href='/a/Events/Social_Events/'>Social Events</a> >  </div>
+ <!-- /place -->
+ <div class="viewbox">
+  <div class="title">
+   <h2>哥大亚太发展协会3v3篮球赛火热进行中！</h2>
+  </div>
+  <!-- /title -->
+  <div class="info"> <small>时间:</small>2013-04-15 08:08<small>来源:</small>原创 <small>作者:</small>Sinan <small>点击:</small>
+   <script src="/plus/count.php?view=yes&aid=100&mid=245" type='text/javascript' language="javascript"></script>
+   次</div>
+  <!-- /info -->
+  
+  <div class="intro">为了丰富校园生活，在学习之余帮助同学们强身健体。哥伦比亚大学亚太发展协会，将于4月27日晚4点至7点在学校Levien Gym举办哥大校园3v3篮球友谊赛。</div>
+  
+  <div class="content">
+   <table width='100%'>
+    <tr>
+     <td><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top;"></div>
+      <p>
+	为了丰富校园生活，在学习之余帮助同学们强身健体。哥伦比亚大学亚太发展协会，现举办哥大校园篮球友谊赛。请有兴趣的同学请仔细阅读本次比赛细则并通过下面链接进行报名。</p>
+<p>
+	<a href="https://docs.google.com/forms/d/1bmB1xdl0xxJB2biMwb6UXBpON6BnV6rxf02DADkPCps/viewform">https://docs.google.com/forms/d/1bmB1xdl0xxJB2biMwb6UXBpON6BnV6rxf02DADkPCps/viewform</a></p>
+<div>
+	通过提交此表格，你与队伍里的其他成员表示遵守：</div>
+<div>
+	1.友谊第一，比赛第二的原则。维持比赛的友好氛围。</div>
+<div>
+	2. 若比赛过程中造成任何运动伤害，哥大亚太发展协会不承担任何责任。</div>
+<div>
+	3. 哥大亚太发展协会保留对活动规则最终解释权。</div>
+<div>
+	4.比赛细则如下：</div>
+<div>
+	&nbsp;</div>
+<div>
+	<p align="left">
+		本次活动每队最多可报5名队员。最多可有12支队伍参赛。比赛将分为<strong><u>小组赛</u></strong>和<strong><u>淘汰赛</u></strong>两个阶段。参赛的十二支队伍将首先以抽签形式被分成<strong><u>四个小组</u></strong>，每组三支队伍进行小组赛。</p>
+	<p align="left">
+		小组赛以单循环方式进行。每队将和本小组中的另两支队伍各比赛一场并以战绩和净胜分<strong><u>决定一支出线</u></strong>的队伍进入淘汰赛。四支淘汰赛队伍将以抽签方式决定各自对手。各自的胜者</p>
+	<p align="left">
+		进入最终决赛，负着争夺三四名。淘汰赛和小组赛比赛规则相同。（注：比赛晋级规则或根据实际参赛队伍调整。）</p>
+	<p align="left">
+		篮球三对三竞赛规则</p>
+	<p align="left">
+		除下列特殊情况外，比赛均按照最新<strong><a href="http://www.itiyu.com/project/basketball/rule/index.htm">国际篮球规则</a></strong>执行。</p>
+	<p align="left" style="margin-left:22.5pt;">
+		一、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 场地和器材</p>
+	<p align="left">
+		第一条</p>
+	<p align="left">
+		1.1&nbsp; 场地：比赛将在哥伦比亚大学Levien Gym 2<sup>nd</sup> floor Dodge进行。每场比赛将占用半个标准的篮球场地。</p>
+	<p align="left">
+		1.2&nbsp; 球：比赛用球为国际男子篮球赛标准用球。</p>
+	<p align="left">
+		&nbsp;</p>
+	<p align="left" style="margin-left:22.5pt;">
+		二、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 工作人员及其职责</p>
+	<p align="left">
+		第二条</p>
+	<p align="left">
+		2.2&nbsp; 裁判人员：一名裁判员和1名记录员。</p>
+	<p align="left">
+		2.3&nbsp; 服装：裁判员与记录员服装颜色、款式应区别于运动员。</p>
+	<p align="left">
+		2.4&nbsp; 权利：裁判是比赛中唯一的执法宣判人员。</p>
+	<p align="left">
+		2.5&nbsp; 记录员职责：记录员兼管计时、记分。记录两队累积的分数、以及比赛时间并按照规则要求宣布比赛进行的时间和比分。</p>
+	<p align="left">
+		&nbsp;</p>
+	<p align="left" style="margin-left:22.5pt;">
+		三、&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 规则</p>
+	<p align="left">
+		第三条</p>
+	<p align="left">
+		3.1&nbsp; 运动员人数：每队最多可报5名男队员外加1名女队员，女队员进球得分翻倍，即原本一分变两分，两分变四分。每队最多可有3名队员同时在场上。所有球队在第一场比赛开始后</p>
+	<p align="left">
+		不允许私自更换参赛队员。否则取消比赛资格。</p>
+	<p align="left">
+		3.2&nbsp; 比赛时间：</p>
+	<p align="left" style="margin-left:49.5pt;">
+		3.2.1&nbsp;&nbsp;&nbsp;&nbsp; 全场比赛时间为15分钟或先到23分者胜。比赛进行到5分钟，12分钟和14分钟时，记录员各宣布一次时间。比赛期间每队允许请求两次暂停，每次暂停时间为30秒。</p>
+	<p align="left" style="margin-left:49.5pt;">
+		3.2.2&nbsp;&nbsp;&nbsp;&nbsp; 为了加快比赛节奏，比赛中前12分钟除暂停、球员受伤及比赛结束等情况下停止计时表外，其余情况均不停表。比赛最后3分钟，任何死球情况都将停表。</p>
+	<p align="left">
+		第四条</p>
+	<p align="left">
+		4.1&nbsp; 每队有1分钟赛前热身活动（准备工作）。如一方迟到3分钟，则判该队弃权。（准备活动不准扣篮）。</p>
+	<p align="left">
+		4.2&nbsp; 比赛开始：双方以掷硬币的形式决定发球权，然后在发球区掷界外球开始比赛。</p>
+	<p align="left">
+		4.3&nbsp; 发球区：中圈不在场地中的半圆叫做发球区，发球区的地面（包括线）算界外。</p>
+	<p align="left">
+		4.4&nbsp; 发球：在发球区掷界外球算做发球。发球时，首先将球传给对方，当对方回传球后，方可传球给同队队员，开始进攻。每次发球地点均在中场半园内。<span style="font-size:12px;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Verdana, STHeiTi, simsun, sans-serif; line-height: 1.4em;">防守队员最多持球两秒。进</span></span></p>
+	<p style="margin: 0px 0px 20px; padding: 0px; line-height: 1.4em; color: rgb(51, 51, 51); font-family: Tahoma, Verdana, STHeiTi, simsun, sans-serif; font-size: 14px;">
+		<span style="font-size:12px;">&nbsp; &nbsp; &nbsp;攻队则必须在5秒内发球。</span></p>
+	<p align="left">
+		第五条</p>
+	<p align="left">
+		5.1&nbsp; 攻守转换：</p>
+	<p align="left">
+		5.1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每次投篮命中后，都由非得分方发球。</p>
+	<p align="left">
+		5.1.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 所有交换发球权的情况（如违例、界外球及投篮命中后），均为死球，在发球区掷界外球继续比赛。所有不交换发球权的情况（如不执行罚球的犯规），则在就近的三分线</p>
+	<p align="left">
+		外发球。在这种情况下，发球前，必须由裁判员递交球。</p>
+	<p align="left">
+		5.1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 守方队员断球或抢到篮板球后，必须将球运（传）出三分线外（持球队员必须双脚踏在三分线外），才可以组织进攻，否则判进攻违例。</p>
+	<p align="left">
+		5.1.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 争球时，在罚球圈跳球，任何一方得球都必须将球运（传）出三分线（持球队员必须双脚踏在三分线外），才可以组织进攻，否则判进攻违例。跳球中得意外投中无效，重</p>
+	<p align="left">
+		新跳球。</p>
+	<p align="left">
+		第六条</p>
+	<p align="left">
+		6.1&nbsp; 24秒规则：24秒规则改为20秒</p>
+	<p align="left">
+		6.2&nbsp; 犯规法则：</p>
+	<p align="left">
+		6.2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 罚球：全队第6次犯规开始执行罚球1次，罚中记1分。罚球后由对方掷界外球。</p>
+	<p align="left">
+		6.2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 恶意犯规：被裁判认定恶意犯规的队员将被罚下1分钟，该队只能有2名队员在场上，直至1分钟期满。</p>
+	<p align="left">
+		第七条</p>
+	<p align="left">
+		7.1&nbsp; 替换：<span style="font-size:12px;"><span style="color: rgb(51, 51, 51); font-family: Tahoma, Verdana, STHeiTi, simsun, sans-serif; line-height: 1.4em;">比赛中换人没有限制，但仅在死球时才能换人并要提前明确告</span><span style="color: rgb(51, 51, 51); font-family: Tahoma, Verdana, STHeiTi, simsun, sans-serif; line-height: 1.4em;">诉裁判。</span></span></p>
+	<p align="left">
+		第八条</p>
+	<p align="left">
+		8.1&nbsp; 得分相等和决胜期：<br />
+		比赛时间终了，以得分多者为胜方。小组赛阶段，比赛时间终了，如得分相等，执行一对一依次罚球，只要出现某队领先1分即为胜方，比赛结束。<br />
+		在淘汰赛阶段，比赛时间终了，如得分相等，则增加2分钟决胜期，发球权仍以掷硬币的形式决定。如果决胜期得分仍相等，执行一对一依次罚球，只要出现某队领先1分即</p>
+	<p align="left">
+		为胜方，比赛结束。</p>
+	<p align="left">
+		第九条</p>
+	<p align="left">
+		9.1&nbsp; 队长：比赛中，队长是场上唯一发言人。</p>
+	<p align="left">
+		9.2&nbsp; 纪律：比赛中应绝对服从裁判，以裁判员的判罚为最终判决。</p>
+	<p align="left">
+		&nbsp;</p>
+	<p align="left">
+		有关本次比赛各项规定的解释权归主办单位。</p>
+	<p align="left">
+		&nbsp;</p>
+	<p align="left">
+		&nbsp;</p>
+	<p align="left">
+		&nbsp;</p>
+</div>
+
+      
+      (责任编辑：CUAsiaWeb)</td>
+    </tr>
+   </table>
+  </div>
+  <!-- /content -->
+  <div class="dede_pages">
+   <ul class="pagelist">
+    
+   </ul>
+  </div>
+  <!-- /pages -->
+  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',100)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',100)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">(0)</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:0%"></span></div>
+     <div class="digg_percent_num">0%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(100);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <!-- //分享代码开始 -->
+  
+  <!-- //分享代码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：<a href='/a/Events/Social_Events/2013/0312/95.html'>精品出游活动第八期：华盛顿樱花节 (已售罄）</a> </li>
+     <li>下一篇：没有了 </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <div class="actbox">
+    <ul>
+     <li id="act-fav"><a href="/plus/stow.php?aid=100" target="_blank">收藏</a></li>
+     <li id="act-err"><a href="/plus/erraddsave.php?aid=100&title=哥大亚太发展协会3v3篮球赛火热进行中！" target="_blank">挑错</a></li>
+     <li id="act-pus"><a href="/plus/recommend.php?aid=100" target="_blank">推荐</a></li>
+     <li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+    </ul>
+   </div>
+   <!-- /actbox -->
+  </div>
+  <!-- /handle -->
+ </div>
+ <!-- /viewbox -->
+ <!-- //AJAX评论区 -->
+ <!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1">
+		<dl class="tbox">
+			<dt>
+				<strong>发表评论</strong>
+				<span class="more"></span>
+			</dt>
+			<dd>
+				<div class="dede_comment_post">
+          <form action="#" method="post" name="feedback">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="100" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <div class="dcmp-title">
+						<small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small>
+					</div><!-- /dcmp-title -->
+					<div class="dcmp-stand">
+						<strong>评价:</strong>
+							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="/templets/default/images/cmt-neu.gif" />中立</label>
+							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="/templets/default/images/cmt-good.gif" />好评</label>
+							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="/templets/default/images/cmt-bad.gif" />差评</label>
+					</div><!-- /dcmp-stand -->
+                    <div class="clr"></div>
+                    <div class="dcmp-mood">
+						<strong>表情:</strong>
+						<ul>            
+								<li><input type="radio" name="face" value="1" checked="1" /><img src="/templets/default/images/mood/ico-mood-1.gif" /></li><li><input type="radio" name="face" value="2" /><img src="/templets/default/images/mood/ico-mood-2.gif" /></li><li><input type="radio" name="face" value="3" /><img src="/templets/default/images/mood/ico-mood-3.gif" /></li><li><input type="radio" name="face" value="4" /><img src="/templets/default/images/mood/ico-mood-4.gif" /></li><li><input type="radio" name="face" value="5" /><img src="/templets/default/images/mood/ico-mood-5.gif" /></li><li><input type="radio" name="face" value="6" /><img src="/templets/default/images/mood/ico-mood-6.gif" /></li><li><input type="radio" name="face" value="7" /><img src="/templets/default/images/mood/ico-mood-7.gif" /></li><li><input type="radio" name="face" value="8" /><img src="/templets/default/images/mood/ico-mood-8.gif" /></li><li><input type="radio" name="face" value="9" /><img src="/templets/default/images/mood/ico-mood-9.gif" /></li><li><input type="radio" name="face" value="10" /><img src="/templets/default/images/mood/ico-mood-10.gif" /></li><li><input type="radio" name="face" value="11" /><img src="/templets/default/images/mood/ico-mood-11.gif" /></li>                   
+						</ul>
+					</div><!-- /dcmp-mood -->
+					<div class="dcmp-content">
+						<textarea cols="60" name="msg" rows="5" class="ipt-txt"></textarea>
+					</div><!-- /dcmp-content -->
+					<div class="dcmp-post"><!--未登陆-->
+							<div class="dcmp-userinfo" id="_ajax_feedback">
+								用户名:<input type="text" name="username" size="16" class="ipt-txt" style="text-transform: uppercase;"/>
+                                验证码:<input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/><img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片" />
+                <input type="checkbox" name="notuser" id="dcmp-submit-guest" /><label for="dcmp-submit-guest" />匿名? </label>
+							</div>
+              <script language="javascript" type="text/javascript">CheckLogin();</script>
+							<div class="dcmp-submit">
+								<button type="button" onClick='PostComment()'>发表评论</button>
+							</div>
+						</div>
+        </form>
+				</div>
+			</dd>
+		</dl>
+	</div><!-- //评论表单区结束 -->
+
+<!-- //评论内容区 -->
+	<a name='commettop'></a>
+	<div class="mt1">
+			<dl class="tbox">
+				<dt>
+					<strong>最新评论</strong>
+					<span class="more"><a href="/plus/feedback.php?aid=100">进入详细评论页&gt;&gt;</a></span>
+				</dt>
+				<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+				<dd id='commetcontentNew'></dd>
+				<dd id='commetcontent'></dd>
+			</dl>
+	</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=100&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'utf-8';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '100');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script><!-- //评论内容区结束 -->
+ </div>
+<!-- //左边内容结束 -->
+<!-- //右边内容开始 -->
+<div class="pright"> 
+ <div class="pright">
+  <div class="commend mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>推荐内容</strong></dt>
+    <dd class='light'>
+     <ul class="d4">
+      <li><a href="/a/Events/Social_Events/2013/0312/95.html"><strong>精品出游活动第八期：华盛顿樱花</strong></a>
+       <p>一览芳菲美景，漫步落樱缤纷。 华盛顿樱花节是美国春季最大的...</p>
+      </li>
+<li><a href="/a/Events/Social_Events/2011/1112/28.html">Woodbury Purchasing Page</a>
+       <p>活动及付款咨询请电邮至：cuasia.event@gmail.com
+...</p>
+      </li>
+<li><a href="/a/Events/Social_Events/2011/0914/7.html"> 畅游西点军校 + Woodbury 采购团</a>
+       <p>本周末哥伦比亚大学亚太发展协会(CU-Asia) 与哥伦比亚大学中国学...</p>
+      </li>
+<li><a href="/a/Events/Social_Events/2011/0914/8.html">CU-Asia: 哥大 - Woodbury 9月18日 全天购</a>
+       <p>CU-Asia: 哥大 - Woodbury 9月18日 全天购物团（第二团！） CU-Asia: O...</p>
+      </li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <!-- /commend -->
+  <div class="hot mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>热点内容</strong></dt>
+    <dd class='light'>
+     <ul class="c1 ico2">
+      <li><a href="/a/Events/Social_Events/2013/0312/95.html"><strong>精品出游活动第八期：华</strong></a></li>
+<li><a href="/a/Events/Social_Events/2012/1030/61.html">NYDC: 黑色星期五Woodbury感恩</a></li>
+<li><a href="/a/Events/Social_Events/2011/1112/28.html">Woodbury Purchasing Page</a></li>
+<li><a href="/a/Events/Social_Events/2012/0903/56.html">NYDC：畅游西点军校 + Woo</a></li>
+<li><a href="/a/Events/Social_Events/2012/1106/63.html">张靓颖我的模样世界巡回</a></li>
+<li><a href="/a/Events/Social_Events/2012/0903/55.html">NYDC: Trip on 9/16/2012</a></li>
+<li><a href="/a/Events/Social_Events/2012/0406/45.html">NYDC: Trip to Philadelphia Purc</a></li>
+<li><a href="/a/Events/Social_Events/2011/0914/7.html"> 畅游西点军校 + Woodbury 采</a></li>
+<li><a href="/a/Events/Social_Events/2012/1015/59.html">中美科技创新与合作发展</a></li>
+<li><a href="/a/Events/Social_Events/2012/0515/50.html">NYDC: Woodbury学期末全天购物</a></li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="contentRtPicAD2" style="margin:10px auto"></div>
+ </div>
+ <!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"></div>
+<div class="footer w960 center mt1 clear">
+<div id="ts-20130411-1">
+<a href="http://www.louisvuittonts.com" title="louis vuitton bags">louis vuitton bags</a>
+<a href="http://www.louisvuittonoutletsuk2013.com" title="louis vuitton handbags">louis vuitton handbags</a>
+<a href="http://www.jordanretros11.org" title="Jordan 11 Retro">Jordan 11 Retro</a>
+<a href="http://www.airsjordanspizike.com" title="cheap jordan shoes">cheap jordan shoes</a>
+<a href="http://www.cheapsjordanshoess.com" title="cheap jordan shoes">cheap jordan shoes</a>
+<a href="http://www.airjordansstore.org" title="Air Jordans Shoes">Air Jordans Shoes</a>
+<a href="http://www.beatsbydrsmonsterinusa.com" title="beats by dre">beats by dre</a>
+<a href="http://www.1monsterbeatsbydreus.com" title="cheap monster beats">cheap monster beats</a>
+</div>
+<script>document.getElementById("ts-20130411-1").style.display="none"</script>
+    <div class="footer_left"></div>
+    <div class="footer_body">
+    	    <div class="b-links">
+<a href="http://www.facebook.com/cuasia?ref=ts" target="_blank"><img src="/uploads/flink/facebook.png"/></a>
+<a href="http://twitter.com/#!/CU_ASIA" target="_blank"><img src="/uploads/flink/twitte.png"/></a>
+<a href="http://weibo.com/2296416574" target="_blank"><img src="/uploads/flink/sina.png"/></a>
+<a href="http://www.renren.com" target="_blank"><img src="/uploads/flink/renren.png"/></a>
+</div>
+    		<div class="powered">
+		Powered by <a href="http://www.cuasia.org" title="哥伦比亚大学亚太发展协会。" target="_blank"><strong>CUASIA CMS V57_UTF-8</strong></a> © 2011-2015 <a href="http://bbs.cuasia.org/" target="_blank">CUASIA</a> Forum.<br />
+		<div class="copyright">Copyright &copy; 2011-2012 CUASIA. All Rights Reserved CUASIA   </div>
+		</div>
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+<!-- /footer -->
+</body>
+</html>
+http://love.whnews.cn ?????http://qss.whnews.cn ?????http://vote.whnews.cn/ ???????http://www.nxtv.com.cn/article/society/20130712.html ????????http://www.nxtv.com.cn/article/tdnxnews/20130723314538.html ??????http://www.northnews.cn/2013/0723/1174339.shtml ????????http://info.yougou.com/pinpai-rfgj/index.php ??????http://soft.zzti.edu.cn/pic/foot/index.html ????????
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

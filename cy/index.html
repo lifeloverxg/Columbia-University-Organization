@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>CU Asia-Pacific Development Society</title>
+
+<link rel="stylesheet" href="text.css" />
+
+    <link rel="stylesheet" href="960.css" />
+
+    <link rel="stylesheet" href="default.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="pascal.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="orman.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+<!--[if lt IE]>
+
+       <link rel="stylesheet" href="ie.css" type="text/css" media="screen">
+
+<![endif]--><title>Untitled Document</title>
+
+<script>
+
+// Copyright 2006-2007 javascript-array.com
+
+
+
+
+var timeout	= 500;
+
+var closetimer	= 0;
+
+var ddmenuitem	= 0;
+
+
+
+// open hidden layer
+
+function mopen(id)
+
+{	
+
+	// cancel close timer
+
+	mcancelclosetime();
+
+
+
+	// close old layer
+
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+
+
+	// get new layer and show it
+
+	ddmenuitem = document.getElementById(id);
+
+	ddmenuitem.style.visibility = 'visible';
+
+
+
+}
+
+// close showed layer
+
+function mclose()
+
+{
+
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+}
+
+
+
+// go close timer
+
+function mclosetime()
+
+{
+
+	closetimer = window.setTimeout(mclose, timeout);
+
+}
+
+
+
+// cancel close timer
+
+function mcancelclosetime()
+
+{
+
+	if(closetimer)
+
+	{
+
+		window.clearTimeout(closetimer);
+
+		closetimer = null;
+
+	}
+
+}
+
+
+
+// close layer when click-out
+
+document.onclick = mclose; </script>
+
+</head>
+
+<body>
+
+<div id="grey">
+
+<div class="container_12">
+
+<div class="grid_12 top"></div>
+
+<div class="grid_12 logo"><img class="" src="http://www.cuasia.org/templets/default/images/logo.gif" alt="img" /></div>
+
+<div class="grid_12 ull"></div>
+
+<div class="grid_12 ul">
+<ul id="sddm">
+
+ <li ><span class="home">Home</span></li>
+
+    <li><a href="#" 
+
+        onmouseover="mopen('m1')" 
+
+        onmouseout="mclosetime()">About us<img src="23.png" alt="img" /></a>
+
+        <div id="m1" 
+
+            onmouseover="mcancelclosetime()" 
+
+            onmouseout="mclosetime()">
+
+        <a href="#">Description</a>
+
+        <a href="#">2013 Team</a>
+
+        <a href="#">Contact</a>
+
+        </div>
+
+    </li>
+
+   
+
+    <li><a href="#" 
+
+        onmouseover="mopen('m2')" 
+
+        onmouseout="mclosetime()">Events<img src="23.png" alt="img" /></a>
+
+        <div id="m2" 
+
+            onmouseover="mcancelclosetime()" 
+
+            onmouseout="mclosetime()">
+
+        <a href="#">Youth Development Forum</a>
+
+        <a href="#">Basketball Tournament</a>
+
+        </div>
+
+    </li>
+
+   
+
+    <li><a href="#">Partners</a></li>
+
+    <li><a href="#">Sponsors</a></li>
+
+</ul>
+
+
+
+</div>
+
+<div class="grid_12">
+
+
+
+    <div id="wrapper">
+
+
+
+        <div class="slider-wrapper theme-default">
+
+            <div class="ribbon"></div>
+
+            <div id="slider" class="nivoSlider">
+
+                <a href="http://www.cuasia.org/a/Photo_Gallery/2013/0415/102.html"><img src="http://www.cuasia.org/uploads/allimg/130504/IMG_4191.png" title="哥大亚太发展协会3v3篮球" height="462" width="951" alt="" /></a>
+
+                <a href="http://www.cuasia.org/a/Culture_Events/2013/0426/103.html"><img src="http://www.cuasia.org/uploads/130426/245-130426132302F3.jpg" title="为雅安和波士顿祈福" height="462" width="951" alt="" /></a>
+
+                <a href="http://www.cuasia.org/a/Culture_Events/2013/0402/97.html"><img src="http://www.cuasia.org/uploads/130314/229-130314223353146.jpg" height="462" width="951" alt="" title="精品出游活动第八期：华盛顿" /></a>
+
+            </div>
+
+            
+
+     </div>
+
+
+
+    </div>
+
+    <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+
+    <script type="text/javascript" src="jquery.nivo.slider.pack.js"></script>
+
+    <script type="text/javascript">
+
+    $(window).load(function() {
+
+        $('#slider').nivoSlider();
+
+    });
+
+    </script>
+
+</div>
+
+
+
+<div style="clear:both"></div>
+
+
+
+</div></div>
+
+<div id="white"><div class="container_12">
+
+<div class="grid_12 wh"></div>
+
+
+
+<div style="clear:both"></div>
+
+<div class="grid_4">
+
+<p class="text4">Upcoming!<span class="left"><a target="_blank" href=""><img src="08.png" class="june" alt="img" /></a><a target="_blank" href=""><img src="09.png" class="june" alt="img" /></a></span></p>
+
+<p><img src="06.png" class="june" alt="img" /><br /><span class="text2">新生群统计答疑</span><br /><span class="text3">12Fall统计系枯藤学长带来统计master program全角度透视，不容错过哟！</span></p><br />
+
+<img src="07.png" class="june" alt="img" /><br /><span class="text2">CUAsia2013秋季招新</span><br /><span class="text3">和谐、友爱、帅哥美女如云。你还在等什么？快加入我们！</span></p><br />
+
+<a class="view" target="_blank" href="">view all</a> <img src="11.png" class="june" alt="img" /> 
+
+</div>
+
+<div class="grid_8 welcome">
+
+<p><span class="text5">哥大亚太发展协会3v3篮球</span><br /><br />
+
+<span class="text6"><img src="http://www.cuasia.org/uploads/small_2013050402280001.jpg" class="man" height="192" width="205"  alt="img" /><br />
+
+首届CUAsia3V3篮球争霸赛于某年某月某日在某体育馆成功举行，小龙队，CUCSSA以及Flames队分别夺得第一、二、三名！
+
+</p>
+
+</div>
+
+</div></div>
+
+
+
+<div id="black">
+
+<div class="container_12"><div class="grid_12 footer"></div>
+
+<div class="grid_3 foot">品牌活动</div>
+
+<div class="grid_3 foot">协会宗旨</div>
+
+<div class="grid_3 foot">网络平台</div>
+
+<div class="grid_3 foot">合作商家 <span class="left"><a target="_blank" href=""><img src="14.png" class="june" alt="img" /></a><a target="_blank" href=""><img src="15.png" class="june" alt="img" /></a></span></div>
+
+<div class="grid_12 footer1"></div>
+
+<div class="grid_3 line"><img src="12.png" alt="img" /></div>
+
+<div class="grid_3 line"><img src="12.png" alt="img" /></div>
+
+<div class="grid_3 line"><img src="12.png" alt="img" /></div>
+
+<div class="grid_3 line"><img src="12.png" alt="img" /></div>
+
+
+
+
+
+<div class="grid_3">
+
+<ul>
+
+<li><a class="text12" target="_blank" href="">发展论坛</a></li>
+
+<li><a class="text12" target="_blank" href="">篮球联赛</a></li>
+
+</ul></div>
+
+<div class="grid_3">
+
+<p class="text9">CUAisa是致力于促进美国和亚太地区（特别是大中华地区）之间的相互了解和文化交流，立足学生，服务学生，由学生自发组织，在哥大注册的，不以盈利为目的学生团体。<br /><br />
+
+
+
+<span class="text10">CUAsia 2013 Team</span></p></div>
+
+<div class="grid_3 connects">
+
+<div class="rss"><a target="_blank" href=""><img src="r.png" alt="img" /></a></div><div class="rss1"> RSS</div>
+
+<br /><br /><br />
+
+
+
+<div class="rss"><a target="_blank" href=""><img src="t.png" alt="img" /></a></div><div class="rss1"> Twitter</div>
+
+<br /><br /><br />
+
+<div class="rss"><a target="_blank" href=""><img src="f.png" alt="img" /></a></div><div class="rss1"> Facebook</div></div>
+
+<div class="grid_3 clients">
+
+<a target="_blank" href=""><img src="16.png" alt="img" /></a><br />
+
+<a target="_blank" href=""><img src="17.png" alt="img" /></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="bl">
+
+<div class="container_12">
+
+<div class="grid_3 suffix_5"><p class="text11">&copy;2013 CUAsia Webteam 
+
+<div class="grid_4 fto"><p></p></div>
+
+</div></div></div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

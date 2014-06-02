@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>专题_CUASIA</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body class="articlelist">
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time"></span>
+     <div class="toplinks"><a href="/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="/data/sitemap.html" target="_blank">网站地图</a>|<a href="/tags.php">TAG标签</a><a href="/data/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.cuasia.org');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('http://www.cuasia.org','CUASIA')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+//保存邮件地址
+function saveMailingList(mail,tip)
+{
+	var taget_obj = document.getElementById(tip);
+	var email = document.getElementById(mail).value;
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+	DedeXHTTP = null;
+}
+</script>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="http://www.cuasia.org"><img src="/templets/default/images/logo.gif" alt="CUASIA"/></a> </h1>
+      </div>
+      <div class="right-bar">
+<div class="mailinglist">
+<h4>Join US:</h4>
+<input name="email" id="email" size="10" type="text" class="email-input"  value="Enter your Email to Join US..." onfocus="if(this.value=='Enter your Email to Join US...'){this.value='';}"  onblur="if(this.value==''){this.value='Enter your Email to Join Us...';}" />
+<button type="button" class="mailinglist-submit" onclick="javascript:saveMailingList('email','mail-tip');">Submit</button>
+<span id="mail-tip">To receive updated event info.</span>
+</div>
+<!-- //mailinglist -->
+<div class="top-search">
+  <form  name="formsearch" action="/plus/search.php">
+    <div class="form">
+      <h4>Search</h4>
+       <input type="hidden" name="kwtype" value="0" />
+       <input type="hidden" name="searchtype" value="titlekeyword" />
+       <input name="q" type="text" class="search-keyword" id="search-keyword" value="Search here..." onfocus="if(this.value=='Search here...'){this.value='';}"  onblur="if(this.value==''){this.value='Search here...';}" />
+      <button type="submit" class="top-search-submit">Search</button>
+    </div>
+    </form>
+    <div class="top-tags">
+      <h4>Tags:</h4>
+      <ul>
+      
+        <li><a href='/tags.php?/%E6%8B%9B%E6%96%B0+2012/'>招新 2012</a></li>
+      
+      </ul>
+    </div>
+</div>
+<!-- //top-search -->
+      </div>
+	</div><!-- //top -->
+	<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+  	<div class="t_l"></div>
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>Home</span></a></li>
+      	
+      	<li><a href='/a/About_US.html' ><span>About US</span></a></li>
+      	
+      	<li><a href='/a/Columbia-China_Forum/' ><span>Columbia-China Forum</span></a></li>
+      	
+      	<li><a href='/a/Events/' ><span>Events</span></a></li>
+      	
+      	<li><a href='/a/Career_Development/' ><span>Career Development</span></a></li>
+      	
+      	<li><a href='/a/Photo_Gallery/' ><span>Photo Gallery</span></a></li>
+      	
+      	<li><a href='http://bbs.cuasia.org/forum.php' ><span>BBS</span></a></li>
+      	
+    	</ul>
+    </div>
+  	<div class="t_r"></div>
+<!-- //search -->
+		</div>
+	</div>
+</div><!-- //header -->
+
+<!-- /header -->
+
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> 专题列表
+		</div><!-- /place -->
+		<div class="listbox">
+			<ul class="e2">
+
+			</ul>
+		</div><!-- /listbox -->
+		<div class="dede_pages">
+			<ul class="pagelist">
+             <span class="pageinfo">共 <strong>0</strong>页<strong>0</strong>条记录</span>
+			</ul>
+		</div><!-- /pages -->
+	</div><!-- /pleft -->
+	
+	<div class="pright">
+		<div class="commend">
+			<dl class="tbox">
+				<dt><strong>推荐专题</strong></dt>
+				<dd>
+					<ul class="d4">
+           
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+		<div id="listRtPicAD" style="margin:10px auto"></div>
+		<div class="hot mt1">
+			<dl class="tbox">
+				<dt><strong>热点内容</strong></dt>
+				<dd>
+					<ul class="c1 ico2">
+                    <li><a href="/a/Events/2011/1112/28.html">Woodbury Purchasing Page</a></li>
+<li><a href="/a/Events/2012/0119/35.html">2012哥伦比亚之夜 · Colum</a></li>
+<li><a href="/a/Events/2012/0216/42.html">哥伦比亚大学亚太发展协</a></li>
+<li><a href="/a/Events/2012/0121/36.html">2012哥伦比亚之夜入场指南</a></li>
+<li><a href="/a/Events/2011/1121/29.html">CU-Asia: 国际学生职业发展</a></li>
+<li><a href="/a/Events/2012/0117/31.html">Pre-Register:2012 Columbia Nigh</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/20.html">The Challenges of China’s Ban</a></li>
+<li><a href="/a/Columbia-China_Forum/2011/0926/22.html">Innovation Works: Capturing Chi</a></li>
+<li><a href="/a/Photo_Gallery/2012/0118/33.html">2012哥伦比亚之夜·美国常</a></li>
+<li><a href="/a/Events/2012/0124/37.html">从春晚到春晚</a></li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+        <div id="listRtPicAD2" style="margin:10px auto"></div>
+
+	</div><!-- /pright -->
+</div>
+
+<div id="innerfooterAD" style="margin:10px auto; width:726px"></div>
+<!-- /footer -->
+
+</body>
+</html>
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

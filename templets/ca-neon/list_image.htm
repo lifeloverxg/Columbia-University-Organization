@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+    <!--<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="{dede:field name='description' function='html2text(@me)'/}" name="description">
+    <meta content="CU-Asia哥伦比亚大学亚太发展协会" name="author">
+    <meta content="{dede:field name='keywords'/}" name="keywords">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/assets/css/cuasia-v3.css" rel="stylesheet">
+  </head>
+  <body>
+
+  {dede:include filename="./ca-neon/head.htm"/}
+
+    <div class="ca-auto-contents">
+      <div class="ca-hspace"></div>
+      <div class="breadcrumb">
+        <strong>Position:</strong> {dede:field name='position'/}
+      </div>
+      <div class="ca-div-padding ca-list-img-main">
+        {dede:list pagesize='12'}
+        <div class="ca-list-img-div">
+            <a href="[field:arcurl/]" class="pic"><img class="ca-list-image img-rounded img-polaroid" src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/></a>
+            <h5 class="media-heading">
+              <b><a href="[field:arcurl/]" class="title">[field:title/]</a></b>
+            </h5>
+            <small>最后更新：[field:pubdate function="GetDateMK(@me)"/]</small>
+        </div>
+        {/dede:list}
+      </div>
+      <div class="pagination ca-pagination">
+        <ul>
+          {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+        </ul>
+      </div>
+    </div>
+
+    {dede:include filename="./ca-neon/footer.htm"/}
+    <script>
+      $(document).ready(function() {
+        $("ul.ca-pagination-ul").children("li").each(function() {
+          var jqObj=$(this);
+          if(!jqObj.has("a").length && !jqObj.has("span").length) {
+            jqObj.html(new Array("<span>", jqObj.html(), "</span>").join(""));
+
+        } } );
+      });
+    </script>
+
+  </body>
+</html>
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

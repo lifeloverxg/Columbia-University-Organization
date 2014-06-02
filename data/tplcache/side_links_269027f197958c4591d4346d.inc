@@ -1,0 +1,21 @@
+<?php
+if(!isset($GLOBALS['_vars'])) $GLOBALS['_vars'] = array(); 
+$fields = array();
+?><!-- //links -->
+<dl class="border mT10">
+    <dt class="caption"><strong>个人书签</strong></dt>
+    <dd class="body lh20">
+      <ul class="list2 mB5">
+      	<?php
+				$dsql->Execute('fl',"Select * From `#@__member_flink` where mid='{$_vars['mid']}' ");
+				while($arr = $dsql->GetArray('fl'))
+				{
+					echo "<li><a href='{$arr['url']}' target='_blank'>{$arr['title']}</a></li>\r\n";
+				}
+				?>
+      </ul>
+    </dd>
+</dl>
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

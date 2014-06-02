@@ -1,0 +1,58 @@
+<!--
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time"></span>
+     <div class="toplinks"><a href="{dede:global.cfg_cmsurl/}/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="{dede:global.cfg_cmsurl/}/data/sitemap.html" target="_blank">网站地图</a>|<a href="{dede:global.cfg_cmsurl/}/tags.php">TAG标签</a><a href="{dede:global.cfg_dataurl/}/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+-->
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+//保存邮件地址
+function saveMailingList(mail,tip)
+{
+	var taget_obj = document.getElementById(tip);
+	var email = document.getElementById(mail).value;
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+	DedeXHTTP = null;
+}
+</script>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="{dede:global.cfg_basehost/}"><img src="{dede:global.cfg_templets_skin/}/images/logo.gif" alt="{dede:global.cfg_webname/}"/></a> </h1>
+      </div>
+<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+  	<div class="t_l"></div>
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>Home</span></a></li>
+      	
+      	<li><a href='/a/About/About_US/'  rel='dropmenu10'><span>About us</span></a></li>
+      	
+      	<li><a href='/a/Forums1/'  rel='dropmenu15'><span>Forums</span></a></li>
+      	
+      	<li><a href='/a/Events/'  rel='dropmenu20'><span>Events</span></a></li>
+      	
+      	<li><a href='/Team/' ><span>Team</span></a></li>
+      	
+      	<li><a href='/Contact_US/' ><span>Contact US</span></a></li>
+      	
+    	</ul>
+    </div>
+
+  	<div class="t_r"></div>
+
+
+	</div>
+</div><!-- //header -->
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

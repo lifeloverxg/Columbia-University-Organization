@@ -1,0 +1,2 @@
+112.90.177.157||/plus/search.php?keyword=as&typeArr[%20uNion%20]=a||SELECT channeltype FROM `CUASIA_arctype` WHERE id= uNion LIMIT 0,1;||union detect
+42.121.113.190||/plus/searchas.php?keyword=as&typeArr[%20uNion%20]=a||SELECT channeltype FROM `CUASIA_arctype` WHERE id= uNion LIMIT 0,1;||SelectBreak

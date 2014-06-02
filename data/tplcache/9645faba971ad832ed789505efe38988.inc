@@ -1,0 +1,12 @@
+{dede:pagestyle maxwidth='800' pagepicnum='12' ddmaxwidth='200' row='3' col='4' value='1'/}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P45545.jpg' text='徐沛东，全国政协委员、中国文联副主席、中国音乐家协会分党组书记、常务副主席。著名词曲作者，国家一级作曲，他创作了大量经典的音乐作品，传唱已久，影响范围极广，作品内容形式包括美声、民族、通俗歌曲及文艺晚会主题曲近千首，许多音乐作品深深地影响了一代人。' width='657' height='403'} /uploads/allimg/120118/3-12011P45545.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P45F8.jpg' text='郁钧剑，全国政协委员、中国文联演艺中心主任。著名歌唱家，他的演唱情真意切、洒脱刘畅，他的演唱风格既有浓郁的民族韵味又有时代气息的鲜明特点。郁钧剑艺术修养全面，作为歌唱家的他的文字和书画等造诣颇深，是一个多才多艺的艺术家。' width='351' height='499'} /uploads/allimg/120118/3-12011P45F8.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P45I9.jpg' text='姜昆，全国政协委员、中国文学艺术基金会秘书长。著名相声表演艺术家，他从艺30余年，创作表演了上百段相声作品，在国内及海外华人中间引起巨大反响，为推动中国相声艺术的发展做出了巨大贡献。 戴志诚，著名相声艺术家。1993年底开始和姜昆合作，表演相声《其实你不懂我的心》和《送你一支歌》、《合家欢》、《踩脚》等作品深受观众喜爱。' width='798' height='529'} /uploads/allimg/120118/3-12011P45I9.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P45U8.jpg' text='阿尔法，著名歌星。能歌善舞的维吾尔族小男孩阿尔法，从2004年中国收视率颇高的节目《非常6+1》一炮打响，赢得“非常明星奖”，成为中国人气很旺的小童星。他用充满热情、洒脱的歌声和舞蹈赢得无数观众的喜爱。' width='302' height='455'} /uploads/allimg/120118/3-12011P45U8.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P45948.jpg' text='玖月奇迹，2008年中央电视台星光大道年度总冠军、2011年中央电视台春节联欢晚会最具人气组合。他们将新颖独特的双排键表演与各种风格的跨界演唱完美结合，在中国乐坛独树一帜，开创了舞台上的全新表演模式。' width='671' height='896'} /uploads/allimg/120118/3-12011P45948.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P50030.jpg' text='陈爱莲，全国政协委员、中国舞蹈家协会原副主席。陈爱莲的舞蹈长于中国古典舞、民族舞等多种风格，舞蹈动作轻盈刘畅，技巧性强，她是我国在国际上最有影响的舞蹈大师之一。' width='1312' height='1256'} /uploads/allimg/120118/3-12011P50030.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P50058.jpg' text='周望，著名古筝演奏家、教育家，中央音乐院教授、研究生导师、中国秦筝派传人。' width='438' height='658'} /uploads/allimg/120118/3-12011P50058.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P50126.jpg' text='焦金海，著名古筝演奏家、教育家、厦门大学教授、硕士生导师。曾创作《山丹丹开花红艳艳》等多首驰名中外的古筝作品。' width='350' height='478'} /uploads/allimg/120118/3-12011P50126.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P50150.jpg' text='王昌元，著名古筝演奏家，曾创作《战台风》等多首驰名中外的古筝作品。' width='577' height='376'} /uploads/allimg/120118/3-12011P50150.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P50220.jpg' text='范上娥，著名古筝演奏家、教育家。曾创作《雪山春晓》等多首驰名中外的古筝作品。' width='935' height='782'} /uploads/allimg/120118/3-12011P50220.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/120118/3-12011P50245.jpg' text='沙里晶，著名古筝演奏家，深圳大学教授，曾创作等多首驰名中外的作品。' width='353' height='484'} /uploads/allimg/120118/3-12011P50245.jpg {/dede:img}

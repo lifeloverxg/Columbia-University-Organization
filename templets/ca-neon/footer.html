@@ -1,0 +1,88 @@
+  <!-- footer begin -->
+    <div class="ca-bottom">
+      <div class="ca-fspace"></div>
+      <div class="ca-bottom-col1">
+        <h5>COMMUNITY</h5>
+        <a class="ca-img-wrap" href="http://www.facebook.com/cuasia?ref=ts" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/facebook.png" />
+        </a>
+        <a class="ca-img-wrap" href="http://twitter.com/#!/cu_asia" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/twitte.png" />
+        </a><br/><br/>
+        <a class="ca-img-wrap" href="http://weibo.com/2296416574" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/sina.png" />
+        </a>
+        <a class="ca-img-wrap" href="http://www.renren.com" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/renren.png" />
+        </a>
+      </div>
+      <div class="ca-bottom-col2">
+        <h5>CONTACT US</h5>
+        <a href="#" target="_blank">Donation</a><br>
+        <a href="#" target="_blank">Advertisment</a><br>
+        <a href="#" target="_blank">Join us</a><br>
+        <a href="#" target="_blank">Feedback</a>
+      </div>
+      <div class="ca-bottom-col2">
+        <h5>LINKS</h5>
+        <a href=" http://columbia.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=10053&catalogId=10001&langId=-1" target="_blank">Bookstore</a><br>
+        <a href="http://www.columbia.edu/" target="_blank">Columbia U</a><br>
+        <a href="http://www.columbia.edu/home/about_columbia/map/index.html" target="_blank">Campus Map</a><br>
+        <a href="http://library.columbia.edu/" target="_blank">Libraries</a>
+      </div>
+      <div class="ca-bottom-col3">
+        <h3>CU-ASIA</h3>
+        <p>A recongnized columbia campus organization devoted to promoting mutual understanding ar exchanged between u.s. and the asia-pacific region, particularly greater china.</p>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/templets/ca-neon/libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+    (function ($, window, delay) {
+     var theTimer = 0;
+     var theElement = null;
+     var theLastPosition = {x:0,y:0};
+     $('[data-toggle]')
+     .closest('li')
+     .on('mouseenter', function (inEvent) {
+         if (theElement) theElement.removeClass('open');
+         window.clearTimeout(theTimer);
+         theElement = $(this);
+
+         theTimer = window.setTimeout(function () {
+             theElement.addClass('open');
+             }, delay);
+         })
+     .on('mousemove', function (inEvent) {
+         if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+             Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+         {
+         theLastPosition.x = inEvent.ScreenX;
+         theLastPosition.y = inEvent.ScreenY;
+         return;
+         }
+
+         if (theElement.hasClass('open')) return;
+         window.clearTimeout(theTimer);
+         theTimer = window.setTimeout(function () {
+             theElement.addClass('open');
+             }, delay);
+         })
+     .on('mouseleave', function (inEvent) {
+             window.clearTimeout(theTimer);
+             theElement = $(this);
+             theTimer = window.setTimeout(function () {
+                 theElement.removeClass('open');
+                 }, delay);
+             });
+    })(jQuery, window, 200); // 200 is the delay in milliseconds
+
+    </script>
+
+  <!-- footer end -->
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

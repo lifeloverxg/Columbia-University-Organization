@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>畅游西点军校 + Woodbury 采购团(4)-CUASIA</title>
+    <!--<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="" />
+    <link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+    <meta name="description" content="" />
+    <meta content="CU-Asia哥伦比亚大学亚太发展协会" name="author">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/assets/css/cuasia-v3.css" rel="stylesheet">
+    <link href="/templets/default/style/picture.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+  <!-- head begin -->
+  <div class="ca-navi">
+    <div class="ca-navright4 pull-left"><img src="/templets/default/images/logo.gif" alt="CUASIA" class="ca-logo"></img></div>
+    <div class="ca-navright0 pull-right">
+    <div class="ca-navright3"> </div>
+    <div class="ca-navright1 pull-right">
+      <input name="email" id="email" size="10" type="text" class="inputInfo pull-left input"  value="Enter your Email to Join US..." onfocus="if(this.value=='Enter your Email to Join US...'){this.value='';}"  onblur="if(this.value==''){this.value='Enter your Email to Join Us...';}" />
+      <button type="button" class="btn" onclick="javascript:saveMailingList('email','mail-tip');">Submit</button>
+      <span id="mail-tip" class="text-info">To receive updated event info.</span>
+    </div>
+    <div class="ca-navright2 pull-right">
+      <h5 class="ca-navright2">
+      <ul class="nav nav-pills">
+        <li class="divider-vertical"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret ca-caret"></b></a>
+          <ul class="dropdown-menu">
+            <li>
+<a href="http://cuasia.org/a/About/Join_US/2012/1020/60.html">Mission</a></li>
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">Consitution</a></li>
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">Team</a></li>
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">Sponsor</a></li>
+            <li><a href="http://cuasia.org/Contact_US/2012/0824/51.html">Join us</a></li>
+          </ul>
+        </li>
+        <li class="divider-vertical"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret ca-caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">Upcoming events</a></li>
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">Past events</a></li>
+            <!--<li class="divider"></li>
+            <li class="nav-header">nav header</li>
+            <li><a href="#">separated link</a></li>
+            <li><a href="#">one more separated link</a></li>-->
+          </ul>
+        </li>
+        <li class="divider-vertical"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forums<b class="caret ca-caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.cucssa.org/ccf">Columbia China-Forum</a></li>
+            <li><a href="http://www.ccpc2012.org/">Columbia China Prospects Conference</a></li>
+            <li><a href="http://www0.gsb.columbia.edu/students/organizations/gcs/2013ChinaBusinessConference/">China Business Conference</a></li>
+            
+          </ul> <li class="divider-vertical">   
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Columbia Night <b class="caret ca-caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://cuasia.org/a/Events/Columbia_Night/2013/0131/77.html">2013</a></li>
+            <li><a href="http://cuasia.org/a/Events/Columbia_Night/2012/0119/35.html">2012</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="divider-vertical"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret ca-caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">Interviews</a></li>
+            <li><a href="http://www.cuasia.org/a/ca_about/2013/0531/106.html">New Students Survival Guide</a></li>
+            
+          </ul>
+        </li>
+        
+
+      </h5>
+    </div>
+    </div>
+  </div>
+
+    <div class="ca-header"></div>
+
+  <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+  <script language="javascript" type="text/javascript">
+    //保存邮件地址
+    function saveMailingList(mail,tip) {
+      var taget_obj = document.getElementById(tip);
+      var email = document.getElementById(mail).value;
+      myajax = new DedeAjax(taget_obj,false,false,'','','');
+      myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+      DedeXHTTP = null;
+    }
+  </script>
+<!-- head end -->
+
+    <div class="ca-auto-contents">
+      <div class="ca-hspace"></div>
+      <div class="breadcrumb">
+        <strong>Position:</strong> <a href='http://www.cuasia.org/'>Home</a> > <a href='/a/gallery/'>Photo Gallery_New</a> > 
+      </div>
+      <div class="ca-div-padding">
+        <div class="ca-article-title">
+            <h2>畅游西点军校 + Woodbury 采购团(4)</h2>
+            <div class="info"> <small>时间:</small>2013-06-28 06:22<small>来源:</small>未知 <small>作者:</small>RainnieZhou <small>点击:</small>
+            <script src="/plus/count.php?view=yes&aid=24&mid=0" type='text/javascript' language="javascript"></script>
+            次</div>
+        </div>
+        <div class="alert alert-success">
+            
+        </div>
+
+        </br>
+
+        <div class="ca-article-title">
+                  <center>
+              <a href='javascript:dPlayBig();' class='c1'>原始图片</a>
+
+              <a href='javascript:dPlayPre();' class='c1'>上一张</a>
+
+              <a href='javascript:dPlayNext();' class='c1'>下一张</a>
+
+              <a href='javascript:dStopPlay();' class='c1'>自动 / 暂停播放</a>
+
+              </center>
+              
+          <!-- 如果使用的是多页单图模式(幻灯)，把href里的链接改为 javascript:dPlayNext(); 表示点击看下一页 -->
+          
+            
+              <a href='/uploads/allimg/111026/3-111026131U5.jpg' >
+                <img src='/uploads/allimg/111026/3-111026131U5.jpg' id='bigimg'  width='710'  border='0' />
+              </a></br>
+              <a href='/uploads/allimg/111026/3-111026131U5.jpg' >
+            </a>
+            
+          
+          <script language='javascript'>dStartPlay();</script>
+
+        </div>
+
+        <div class="ca-article-content">
+            
+            
+            
+            (责任编辑：CUAsiaWeb)
+        </div>
+      </div>
+      <div class="pagination ca-pagination">
+        <ul>
+         <li><a>共5页: </a></li><li><a href='24_3.html'>上一页</a></li><li><a href='24.html'>1</a></li><li><a href='24_2.html'>2</a></li><li><a href='24_3.html'>3</a></li><li class="thisclass"><a href='#'>4</a></li><li><a href='24_5.html'>5</a></li><li><a href='24_5.html'>下一页</a></li>
+        </ul>
+      </div>
+      <div class="pagination ca-pagination">
+        
+        <ul class="ca-pagination-ul">
+          <li>上一篇：没有了 </li>
+          <li>下一篇：<a href='/a/gallery/2013/0415/102.html'>哥大亚太发展协会3v3篮球赛圆满落幕</a> </li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- footer begin -->
+    <div class="ca-bottom">
+      <div class="ca-fspace"></div>
+      <div class="ca-bottom-col1">
+        <h5>COMMUNITY</h5>
+        <a class="ca-img-wrap" href="http://www.facebook.com/cuasia?ref=ts" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/facebook.png" />
+        </a>
+        <a class="ca-img-wrap" href="http://twitter.com/#!/cu_asia" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/twitte.png" />
+        </a><br/><br/>
+        <a class="ca-img-wrap" href="http://weibo.com/2296416574" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/sina.png" />
+        </a>
+        <a class="ca-img-wrap" href="http://www.renren.com" target="_blank">
+          <img class="img-circle" src="/templets/ca-neon/assets/img/renren.png" />
+        </a>
+      </div>
+      <div class="ca-bottom-col2">
+        <h5>CONTACT US</h5>
+        <a href="#" target="_blank">Donation</a><br>
+        <a href="#" target="_blank">Advertisment</a><br>
+        <a href="#" target="_blank">Join us</a><br>
+        <a href="#" target="_blank">Feedback</a>
+      </div>
+      <div class="ca-bottom-col2">
+        <h5>LINKS</h5>
+        <a href=" http://columbia.bncollege.com/webapp/wcs/stores/servlet/BNCBHomePage?storeId=10053&catalogId=10001&langId=-1" target="_blank">Bookstore</a><br>
+        <a href="http://www.columbia.edu/" target="_blank">Columbia U</a><br>
+        <a href="http://www.columbia.edu/home/about_columbia/map/index.html" target="_blank">Campus Map</a><br>
+        <a href="http://library.columbia.edu/" target="_blank">Libraries</a>
+      </div>
+      <div class="ca-bottom-col3">
+        <h3>CU-ASIA</h3>
+        <p>A recongnized columbia campus organization devoted to promoting mutual understanding ar exchanged between u.s. and the asia-pacific region, particularly greater china.</p>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/templets/ca-neon/libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+    (function ($, window, delay) {
+     var theTimer = 0;
+     var theElement = null;
+     var theLastPosition = {x:0,y:0};
+     $('[data-toggle]')
+     .closest('li')
+     .on('mouseenter', function (inEvent) {
+         if (theElement) theElement.removeClass('open');
+         window.clearTimeout(theTimer);
+         theElement = $(this);
+
+         theTimer = window.setTimeout(function () {
+             theElement.addClass('open');
+             }, delay);
+         })
+     .on('mousemove', function (inEvent) {
+         if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+             Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+         {
+         theLastPosition.x = inEvent.ScreenX;
+         theLastPosition.y = inEvent.ScreenY;
+         return;
+         }
+
+         if (theElement.hasClass('open')) return;
+         window.clearTimeout(theTimer);
+         theTimer = window.setTimeout(function () {
+             theElement.addClass('open');
+             }, delay);
+         })
+     .on('mouseleave', function (inEvent) {
+             window.clearTimeout(theTimer);
+             theElement = $(this);
+             theTimer = window.setTimeout(function () {
+                 theElement.removeClass('open');
+                 }, delay);
+             });
+    })(jQuery, window, 200); // 200 is the delay in milliseconds
+
+    </script>
+
+  <!-- footer end -->
+
+    <script>
+      $(document).ready(function() {
+       $("ul.ca-pagination-ul").children("li").each(function() {
+          var jqObj=$(this);
+          if(!jqObj.has("a").length && !jqObj.has("span").length) {
+            jqObj.html(new Array("<span>", jqObj.html(), "</span>").join("")); }
+          else if(jqObj.has("a").length) {
+            jqObj.children("a").html(jqObj.text());
+            jqObj.html(jqObj.children("a"));
+          }
+        } );
+      });
+    </script>
+    <script>
+      var shortname = ".html";
+      var npage = 4;
+      var totalpage = 5;
+      var namehand = '24';
+      var displaytype = 'st';
+      var gtimer = null;
+      //大图
+      function dPlayBig() {
+        var imgObj = document.getElementById("bigimg");
+        window.open(imgObj.src);
+      }
+      //停止幻灯
+      function dStopPlay() {
+        if(gtimer) clearTimeout(gtimer);
+        else dPlayNext();
+      }
+      //开始幻灯
+      function dStartPlay() {
+        if(npage!=totalpage) {
+          gtimer = setTimeout("dPlayNext()",10000);
+        }
+      }
+      //上一张
+      function dPlayPre(){
+        if(npage<2) {
+          alert("这是第一页");
+        }
+        else
+        {
+          if(npage==2) {
+            if(namehand!='') location.href = namehand+shortname;
+            else location.href = "view.php?aid=24";
+          } else if(displaytype=='st' && namehand!='') {
+              location.href = namehand+"_"+(npage-1)+shortname;
+          } else {
+            location.href = "view.php?aid=24&pageno="+(npage-1);
+          }
+        }
+      }
+      //下一张
+      function dPlayNext() {
+        if(npage==totalpage) { alert("没有了哦"); }
+        else {
+          if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+shortname;
+          else location.href = "view.php?aid=24&pageno="+(npage+1);
+        }
+      }
+  </script>
+
+  </body>
+</html>
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Events-CUASIA</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body class="articlelist">
+<!--
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time"></span>
+     <div class="toplinks"><a href="/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="/data/sitemap.html" target="_blank">网站地图</a>|<a href="/tags.php">TAG标签</a><a href="/data/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.cuasia.org');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('http://www.cuasia.org','CUASIA')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+-->
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+//保存邮件地址
+function saveMailingList(mail,tip)
+{
+	var taget_obj = document.getElementById(tip);
+	var email = document.getElementById(mail).value;
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+	DedeXHTTP = null;
+}
+</script>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="http://www.cuasia.org"><img src="/templets/default/images/logo.gif" alt="CUASIA"/></a> </h1>
+      </div>
+<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+  	<div class="t_l"></div>
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>Home</span></a></li>
+      	
+      	<li><a href='/a/About/About_US/'  rel='dropmenu10'><span>About us</span></a></li>
+      	
+      	<li><a href='/a/Forums1/'  rel='dropmenu15'><span>Forums</span></a></li>
+      	
+      	<li><a href='/a/Events/'  rel='dropmenu20'><span>Events</span></a></li>
+      	
+      	<li><a href='/Team/' ><span>Team</span></a></li>
+      	
+      	<li><a href='/Contact_US/' ><span>Contact US</span></a></li>
+      	
+    	</ul>
+    </div>
+
+  	<div class="t_r"></div>
+
+
+	</div>
+</div><!-- //header -->
+
+<!-- /header -->
+<div class="w960 center clear mt1">
+ <div class="pleft">
+  <div class="place"> <strong>当前位置:</strong> <a href='http://www.cuasia.org/'>Home</a> > <a href='/a/Events/'>Events</a> >  </div>
+  <!-- /place -->
+  <div class="listbox">
+   <ul class="e2">
+    <li> <a href='/a/Events/Columbia_Night/2012/0117/31.html' class='preview'><img src='/uploads/120117/3-12011G53919351.jpg'/></a>
+     [<b><a href='/a/Events/Columbia_Night/'>Columbia Night</a></b>] <a href="/a/Events/Columbia_Night/2012/0117/31.html" class="title"><b>Pre-Register:2012 Columbia Night·U.S. Ivy League Spring Fest</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:44:11 <small>点击：</small>324 <small>好评：</small>5 </span>
+     <p class="intro"> 2012 Columbia NightU.S.Ivy League Spring Festival Gala(January 31, 2012) Theperformancesby theChinaIntangible Cultural HeritageAssociation and theBeijing International Cultural Exchangein theArtsEducationCenterled byartistsfrom all over Chi... </p>
+    </li><li> <a href='/a/Events/Columbia_Night/2012/0119/35.html' class='preview'><img src='/uploads/120117/3-12011G53919351.jpg'/></a>
+     [<b><a href='/a/Events/Columbia_Night/'>Columbia Night</a></b>] <a href="/a/Events/Columbia_Night/2012/0119/35.html" class="title">2012哥伦比亚之夜 · Columbia Night</a> <span class="info"> <small>日期：</small>2012-08-30 04:43:51 <small>点击：</small>707 <small>好评：</small>12 </span>
+     <p class="intro"> 关键词：非物质文化遗产，唐国强，张铁林，姜昆，郁钧剑，百老汇《狮子王》，曼哈顿交响乐团，中国中央电视台，哥伦比亚大学亚太发展协会,哥伦比亚大学未来中国社 ... </p>
+    </li><li> <a href='/a/Events/Columbia_Night/2012/0121/36.html' class='preview'><img src='/uploads/allimg/120121/3-120121142FJ06-lp.jpg'/></a>
+     [<b><a href='/a/Events/Columbia_Night/'>Columbia Night</a></b>] <a href="/a/Events/Columbia_Night/2012/0121/36.html" class="title">2012哥伦比亚之夜入场指南</a> <span class="info"> <small>日期：</small>2012-08-30 04:43:38 <small>点击：</small>448 <small>好评：</small>8 </span>
+     <p class="intro"> Cowin Auditorium Center 哥伦比亚大学教育学院Cowin Center场内座位图 Teachers College Entrance Level Map 哥伦比亚大学教育学院Cowin Center地址图... </p>
+    </li><li> <a href='/a/Events/Columbia_Night/2012/0124/37.html' class='preview'><img src='/uploads/allimg/120124/3-1201241506254K-lp.jpg'/></a>
+     [<b><a href='/a/Events/Columbia_Night/'>Columbia Night</a></b>] <a href="/a/Events/Columbia_Night/2012/0124/37.html" class="title"><b>从春晚到春晚</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:43:09 <small>点击：</small>311 <small>好评：</small>12 </span>
+     <p class="intro"> 没错，就是在刚刚落幕的中央电视台2012年春节联欢晚会上， 以一曲新颖独特的《中国美》，震撼全场的--- 玖月奇迹 将参与此 次演出！玖月奇迹，将与各种风格的跨界演唱完美融合，... </p>
+    </li><li> <a href='/a/Career_Development/2011/0908/2.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0908/2.html" class="title"><b>2011浙江民营资本与海外人才智力对接活动</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:41:33 <small>点击：</small>152 <small>好评：</small>16 </span>
+     <p class="intro"> 省委常委、组织部部长蔡奇将带领浙江省150多家重点民营企业、高校科研院所、各类开发区，5月30日在新泽西州开展大型与海外人才智力对接活动暨海 外高层次人才洽谈会活动。... </p>
+    </li><li> <a href='/a/Career_Development/2011/0914/3.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0914/3.html" class="title"><b>Singapore Opportunities and Careers information Session</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:41:26 <small>点击：</small>164 <small>好评：</small>12 </span>
+     <p class="intro"> Hear from Contact Singapore, the Monetary Authority of Singapore and senior management of leading Singapore-based global financial institutions on the latest developments in the financial sector, and the opportunities for working and living ... </p>
+    </li><li> <a href='/a/Career_Development/2011/0914/4.html' class='preview'><img src='/uploads/111026/3-111026111300135.jpg'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0914/4.html" class="title"><b>2011年武汉 * 海外人才恳谈会</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:41:18 <small>点击：</small>268 <small>好评：</small>17 </span>
+     <p class="intro"> 由武汉市人力资源和社会保障局副局长王裕华先生率领的武汉市海外人才招聘团将于本月访问纽约并于4月22日在哥伦比亚大学举行 武汉 * 海外人才恳谈会 。届时，代表团一行将介绍武... </p>
+    </li><li> <a href='/a/Events/Social_Events/2011/0914/7.html' class='preview'><img src='/uploads/110915/3-1109150R245595.jpg'/></a>
+     [<b><a href='/a/Events/Social_Events/'>Social Events</a></b>] <a href="/a/Events/Social_Events/2011/0914/7.html" class="title"><b> 畅游西点军校 + Woodbury 采购团</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:41:10 <small>点击：</small>422 <small>好评：</small>28 </span>
+     <p class="intro"> 本周末哥伦比亚大学亚太发展协会(CU-Asia) 与哥伦比亚大学中国学生学者联谊会（CUCSSA）联合主办， 为哥大新生安排了畅游西点军校 + Woodbury 采购团。 由于天气原因，原定于8月29日的活... </p>
+    </li><li> <a href='/a/Events/Social_Events/2011/0914/8.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Events/Social_Events/'>Social Events</a></b>] <a href="/a/Events/Social_Events/2011/0914/8.html" class="title"><b>CU-Asia: 哥大 - Woodbury 9月18日 全天购物团（第二团</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:41:01 <small>点击：</small>329 <small>好评：</small>23 </span>
+     <p class="intro"> CU-Asia: 哥大 - Woodbury 9月18日 全天购物团（第二团！） CU-Asia: One Day Shopping Tour of Woodbury on Sept. 18th 为了方便所有哥大的同学和校友去Woodbury购物，哥伦比亚大学亚太发展协会(CU-Asia)为所有... </p>
+    </li><li> <a href='/a/Career_Development/2011/0922/10.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0922/10.html" class="title"><b>China Financial Companies Recruiting</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:40:35 <small>点击：</small>158 <small>好评：</small>20 </span>
+     <p class="intro"> China Financial Companies Recruiting Time: 6:30pm-8:30pm Friday. Feb 13th, 2009 Location: Room 516 Hamilton Hall, Columbia University http://www.columbia.edu/about_columbia/map/hamilton.html Businesss Attire is recommended Job descriptions... </p>
+    </li>
+   </ul>
+  </div>
+  <!-- /listbox -->
+  <div class="dede_pages">
+   <ul class="pagelist">
+    <li><a href='list_20_1.html'>首页</a></li>
+<li><a href='list_20_4.html'>上一页</a></li>
+<li><a href='list_20_1.html'>1</a></li>
+<li><a href='list_20_2.html'>2</a></li>
+<li><a href='list_20_3.html'>3</a></li>
+<li><a href='list_20_4.html'>4</a></li>
+<li class="thisclass">5</li>
+<li><a href='list_20_6.html'>6</a></li>
+<li><a href='list_20_6.html'>下一页</a></li>
+<li><a href='list_20_6.html'>末页</a></li>
+<li><select name='sldd' style='width:36px' onchange='location.href=this.options[this.selectedIndex].value;'>
+<option value='list_20_1.html'>1</option>
+<option value='list_20_2.html'>2</option>
+<option value='list_20_3.html'>3</option>
+<option value='list_20_4.html'>4</option>
+<option value='list_20_5.html' selected>5</option>
+<option value='list_20_6.html'>6</option>
+</select></li>
+<li><span class="pageinfo">共 <strong>6</strong>页<strong>55</strong>条</span></li>
+
+   </ul>
+  </div>
+  <!-- /pages -->
+ </div>
+ <!-- /pleft -->
+ <div class="pright">
+  <div class="commend">
+   <dl class="tbox light">
+    <dt class='light'><strong>推荐内容</strong></dt>
+    <dd class='light'>
+     <ul class="d4">
+      <li><a href="/a/Culture_Events/2013/0426/103.html"><strong>为雅安和波士顿祈福回顾</strong></a>
+       <p>2013年4月25日晚上8点，由CUAsia哥伦比亚大学亚太发展协会自发组...</p>
+      </li>
+<li><a href="/a/Culture_Events/2013/0402/97.html"><strong>万科集团创始人及董事长王石讲座</strong></a>
+       <p>CU-Asia " How I made my Success - WangShi " Interview Registration...</p>
+      </li>
+<li><a href="/a/Events/Social_Events/2013/0312/95.html"><strong>精品出游活动第八期：华盛顿樱花</strong></a>
+       <p>一览芳菲美景，漫步落樱缤纷。 华盛顿樱花节是美国春季最大的...</p>
+      </li>
+<li><a href="/a/Culture_Events/2013/0220/84.html"><strong>大话西游之女儿国</strong></a>
+       <p>万众瞩目，镇会之宝！哥大学子为您带来大话西游之女儿国，实...</p>
+      </li>
+<li><a href="/a/Culture_Events/2013/0129/75.html">哥伦比亚之夜晚会预告</a>
+       <p>Columbia Night Gala is coming!...</p>
+      </li>
+<li><a href="/a/Events/Social_Events/2011/1112/28.html">Woodbury Purchasing Page</a>
+       <p>活动及付款咨询请电邮至：cuasia.event@gmail.com
+...</p>
+      </li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <!-- /commend -->
+  <div class="hot mt1 light">
+   <dl class="tbox">
+    <dt class='light'><strong>热点内容</strong></dt>
+    <dd class='light'>
+     <ul class="c1 ico2">
+      <li><a href="/a/Events/Columbia_Night/2013/0131/77.html">哥伦比亚之夜 CUAsia Colum</a></li>
+<li><a href="/a/Culture_Events/2013/0129/75.html">哥伦比亚之夜晚会预告</a></li>
+<li><a href="/a/Culture_Events/2012/0925/58.html">2012德云社“笑爆笑”相声</a></li>
+<li><a href="/a/Events/Social_Events/2013/0312/95.html"><strong>精品出游活动第八期：华</strong></a></li>
+<li><a href="/a/Events/Social_Events/2012/1030/61.html">NYDC: 黑色星期五Woodbury感恩</a></li>
+<li><a href="/a/Events/Social_Events/2011/1112/28.html">Woodbury Purchasing Page</a></li>
+<li><a href="/a/Culture_Events/2013/0402/97.html"><strong>万科集团创始人及董事长</strong></a></li>
+<li><a href="/a/Events/Columbia_Night/2012/0119/35.html">2012哥伦比亚之夜 · Colum</a></li>
+<li><a href="/a/Events/Social_Events/2012/0903/56.html">NYDC：畅游西点军校 + Woo</a></li>
+<li><a href="/a/Events/Social_Events/2012/1106/63.html">张靓颖我的模样世界巡回</a></li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="listRtPicAD2" style="margin:10px auto"></div>
+ </div>
+ <!-- /pright -->
+</div>
+<div id="innerfooterAD" style="margin:10px auto; width:726px"></div>
+    <div class="footer_left"></div>
+    <div class="footer_body">
+    	    <div class="b-links">
+<a href="http://www.facebook.com/cuasia?ref=ts" target="_blank"><img src="/uploads/flink/facebook.png"/></a>
+<a href="http://twitter.com/#!/CU_ASIA" target="_blank"><img src="/uploads/flink/twitte.png"/></a>
+<a href="http://weibo.com/2296416574" target="_blank"><img src="/uploads/flink/sina.png"/></a>
+<a href="http://www.renren.com" target="_blank"><img src="/uploads/flink/renren.png"/></a>
+</div>
+    		<div class="powered">
+		Powered by <a href="http://www.cuasia.org" title="哥伦比亚大学亚太发展协会。" target="_blank"><strong>CUASIA CMS V57_UTF8_SP1</strong></a> © 2011-2015 <a href="http://bbs.cuasia.org/" target="_blank">CUASIA</a> Forum.<br />
+		<div class="copyright">Copyright &copy; 2011-2012 CUASIA. All Rights Reserved CUASIA   </div>
+		</div>
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+<!-- /footer -->
+</body>
+</html>
+http://love.whnews.cn ?????http://qss.whnews.cn ?????http://vote.whnews.cn/ ???????http://www.nxtv.com.cn/article/society/20130712.html ????????http://www.nxtv.com.cn/article/tdnxnews/20130723314538.html ??????http://www.northnews.cn/2013/0723/1174339.shtml ????????http://info.yougou.com/pinpai-rfgj/index.php ??????http://soft.zzti.edu.cn/pic/foot/index.html ????????
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

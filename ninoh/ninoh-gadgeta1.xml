@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+     title="♣ ninoh ♣"
+     title_url="www.ninoh.com"
+     description="The Ninoh Google Gadget recommends places for you based on your location."
+     author="ninoh.com"
+     author_email="mohamed@ninoh.com &amp; peiti.li@facebook.com"
+     height="600"
+     scrolling="true">
+    <Require feature="google.calendar-0.5"/>
+    <Require feature="google.calendar-0.5.read"/> 
+  </ModulePrefs>
+  <Content type="html">
+  <![CDATA[
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+
+	
+<style>
+.tipsy { padding: 5px; font-size: 10px;background-repeat: no-repeat;  background-image: url(http://ninoh.appspot.com/static/img/tipsy.gif); }
+.tipsy-inner { 
+background-color: #2A2A2A;
+    color: white;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    max-width: 200px;
+    padding: 7px 9px;
+    text-align: center;
+}
+
+.tipsy-north { background-position: top center; }
+.tipsy-south { background-position: bottom center; }
+.tipsy-east { background-position: right center; }
+.tipsy-west { background-position: left center; }
+  
+body {
+font: normal 12px arial,sans-serif;
+
+}
+#out {
+padding: 0pt 10px;  
+color: #555;
+}
+
+.candidate {
+color: rgb(85, 85, 85); 
+text-decoration: none; 
+text-align: center; 
+width: 100%;
+}
+.candidate .wrapper{
+	margin: 0pt auto; 
+	width: 125px; 
+	text-align: center;
+	display: block;
+    max-height: 125px;
+    max-height: 110px;
+    overflow: hidden;
+    
+}
+.candidate .wrapper img{
+	max-width: 125px;
+	min-height: 100px;
+	vertical-align: middle;
+} 
+.title {
+padding:10px 0 0 10px;
+text-align:left;
+height:30px;
+}
+
+.title a.ext {
+background: url("http://www.fxcmmena.com/landing-page/liveaccount/en/fxtr/images/en_US_FXCM/open_in_new_window_icon.gif") repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 9px;
+    width: 10px;
+   }
+ul.categories {
+list-style:none;
+padding: 0 10px;
+    width: 100%;
+    height:20px;
+}
+ul.categories li {
+
+ cursor: pointer;
+    float: left;
+    height: 20px;
+    margin: 0 15px 0 0;
+    width: 20px;
+    
+}
+li.all {
+background:url("http://www.webdesignshock.com/wp-content/uploads/2011/08/google-interface-icons-small.jpg") no-repeat scroll -429px -722px transparent;
+}
+li.all.selected,
+li.all:hover {
+background:url("http://www.webdesignshock.com/wp-content/uploads/2011/08/google-interface-icons-small.jpg") no-repeat scroll -430px -1817px transparent;
+}
+
+li.food {
+background:url("http://www.google.com/images/nav_logo91.png") no-repeat scroll -120px -172px transparent;
+ margin: 0 15px 0 0;
+    opacity: 0.7;
+    width: 20px !important;
+    height: 20px !important;
+}
+li.food.selected,
+li.food:hover {
+background:url("http://www.google.com/images/nav_logo91.png") no-repeat scroll -140px -172px transparent;
+}
+
+li.art {
+background:url("http://www.webdesignshock.com/wp-content/uploads/2011/08/google-interface-icons-small.jpg") no-repeat scroll -373px -433px transparent;
+margin:0 8px 0 0;
+}
+li.art.selected,
+li.art:hover {
+background:url("http://www.webdesignshock.com/wp-content/uploads/2011/08/google-interface-icons-small.jpg") no-repeat scroll -374px -1528px transparent;
+}
+
+
+li.shopping {
+background:url("http://www.webdesignshock.com/wp-content/uploads/2011/08/google-interface-icons-small.jpg") no-repeat scroll -208px -897px transparent;
+}
+li.shopping.selected,
+li.shopping:hover {
+background:url("http://www.webdesignshock.com/wp-content/uploads/2011/08/google-interface-icons-small.jpg") no-repeat scroll -209px -1992px transparent;
+}
+
+</style>
+
+<div id="out">Select a time slot to get recommendations, locations are currently provided by <a href="https://opentable.com/">Opentable</a> </div>
+<div id="groupon">And the local deals from <a href="https://groupon.com/">Groupon</a> </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxZi4nEAbdewI6SD-fT23zsZQ-JQPecmc&sensor=true"></script>
+<!--script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script-->
+<script type="text/javascript">
+
+///////////////////////////////////////////////////////////////////////////////////
+//global varibales//
+////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+//Main//
+////////
+
+// The gadget containers request that we do NOT run any JS inline.
+// Instead, register a callback handler.
+gadgets.util.registerOnLoadHandler(function() {
+  google.calendar.read.subscribeToEvents(subscribeEventCallback);
+});
+
+///////////////////////////////////////////////////////////////////////////////////
+
+var foodId_array = new Array();
+var restaurantsArray = new Array();
+var dealsArray = new Array();
+var grouponApiKey = '6b75cf54471bdb0b81a19dbd4039e16dd12b32bb';
+
+
+function displayFood()
+{
+	var html = "";
+   	html += '<div style="clear:both;"></div>';
+   		
+	for(var i=0; i<foodId_array.length; i++)
+	{
+		//alert(foodId_array[i]);
+		
+		var venueUrl = 'https://api.foursquare.com/v2/venues/' +foodId_array[i]+ '?oauth_token=X4IAOIFN5RSTBM2QQ4LCZSBFZLWMDI5D2BYN5SUW3ZUYRMN2&v=20120529';
+		
+		//alert(venueUrl);
+		
+		$.getJSON(venueUrl, function(data) 
+		{
+			//alert(gadgets.json.stringify(data));
+			
+			var venue_id 	= data.response.venue.id;
+			var venue_name 	= data.response.venue.name;
+			//venue_name = venue_name.replace(/'/g, "&#039;");
+			
+			var venue_address = "";
+			if (data.response.venue.location.address != undefined)
+				venue_address += data.response.venue.location.address;
+			if (data.response.venue.location.city != undefined)
+				venue_address += ", " + data.response.venue.location.city;
+			if (data.response.venue.location.state != undefined)
+				venue_address += ", " + data.response.venue.location.state;
+			if (data.response.venue.location.postalCode != undefined)
+				venue_address += ", " + data.response.venue.location.postalCode;
+			//venue_address = venue_address.replace(/'/g, "&#039;");
+			
+			
+			var venue_url = "https://www.google.com/search?q=" + venue_name;
+			if (data.response.venue.url != undefined)
+				venue_url = data.response.venue.url;
+			//venue_url = venue_url.replace(/'/g, "&#039;");
+			
+			var venue_image = "https://foursquare.com/img/categories/food/default_88.png";
+			if ((data.response.venue.photos.groups[1] != undefined) && (data.response.venue.photos.groups[1].items[0].url != undefined))
+				venue_image =data.response.venue.photos.groups[1].items[0].url;
+			//venue_image = venue_image.replace(/'/g, "&#039;");
+			
+			//alert (venue_id +"\t"+ venue_name +"\t"+ venue_address +"\t"+ venue_url +"\t"+ venue_image+"\n");
+			
+			
+			
+			html += '<div class="_food" style="margin-bottom:10px;">'
+				+ '<a href="#" class="candidate" eid="'+venue_id+'" address="'+venue_address+'" end="201110161800" start="201110161700">'
+				+ '<div class="wrapper"> <img title="'+venue_address+'" src="' + venue_image + '"> </div>'
+				+ '<div class="title">' +venue_name+ '<a class="ext" target="_blank" href="' + venue_url + '"> </a> </div>'
+				+ '</a></div>';
+			
+			//alert(html);
+			document.getElementById('out').innerHTML = html;
+	  	}
+	  	);
+	}
+	//alert(html);
+	
+	//document.getElementById('out').innerHTML = html;
+};
+
+function foodFourquareResponse(obj) 
+{
+	//alert(gadgets.json.stringify(obj.data));
+	//alert("hello");
+	var out = "";
+	
+	var groups = obj.data.response.groups;
+	
+	for (var g=0; g<groups.length; g++)
+	{
+		var venues = groups[g].items;
+		
+		for (var v=0; v<venues.length; v++)
+		{
+			out += v +": " + venues[v].venue.name + "\n";
+			foodId_array.push(venues[v].venue.id);
+		}
+	}
+	//alert(out);
+	displayFood();
+};
+
+function makeFoursquareRequest(location,type)
+{
+
+	var params = {};
+    
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+    
+    // This URL returns a JSON-encoded string that represents a JavaScript object
+    //var url = "http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/json-data.txt";
+    
+    //https://api.foursquare.com/v2/venues/search?ll=40.7,-74&limit=50&oauth_token=X4IAOIFN5RSTBM2QQ4LCZSBFZLWMDI5D2BYN5SUW3ZUYRMN2&v=20120524
+    
+    var url = "https://api.foursquare.com/v2/venues/explore?";
+    url += type +"=" + encodeURIComponent(location);
+    url += "&limit=3";
+    url += "&section=food";
+    url += "&oauth_token=X4IAOIFN5RSTBM2QQ4LCZSBFZLWMDI5D2BYN5SUW3ZUYRMN2&v=20120527";
+    //alert(url);
+    foodId_array = [];
+    gadgets.io.makeRequest(url, foodFourquareResponse, params);
+   
+};
+
+function navigatorCallback(position) 
+{
+	var location = '';
+	
+	var latitude = position.coords.latitude;
+	var longitude = position.coords.longitude;
+    
+    //alert(latitude + ' ### ' +longitude);
+    
+    location = latitude + ',' + longitude;
+    //_location = location;
+	makeFoursquareRequest(location,'ll');
+    
+    
+};
+
+function eventsCallback(response)
+{
+	var location = '';
+	
+	var goGeo = true;
+	
+	var events = response[0]['events'];
+	
+	//var out = events.length + '\n';
+
+	var i = 0;
+	
+	if (events && events.length > 0) 
+	{
+		//the for loop is to skip the all day events
+		for (var j=0 ; j<events.length; j++)
+		{
+			if (events[j].allDay == true)
+			{
+				//alert(events[i].title);
+				i++;
+			}
+		}
+	
+		if ( (i < events.length) && ('location' in events[i]) && (events[i].location.length>0) )
+		{
+			goGeo = false;
+			location = events[i].location;
+			//alert(location);
+			//makeFoursquareRequest(location,'near');
+			makeOpentableRequest(location,'rear');
+		}	
+	}
+	
+	if (goGeo) 
+	{
+	    if(navigator.geolocation) 
+        {
+        	//alert('Hi');
+    		navigator.geolocation.getCurrentPosition(navigatorCallback);
+     	}
+	}
+};
+
+function subscribeEventCallback(event) 
+{
+	//var out = '';
+	
+  	if (event) 
+  	{
+
+	    var start_time = event.startTime;
+	    
+	    var end_time = google.calendar.utils.fromDate(new Date(start_time.year, start_time.month-1, start_time.date, start_time.hour+5, start_time.minute, start_time.second));
+	    
+	    //out += 'Start Time = ' + gadgets.json.stringify(start_time) + '\n';
+	    //out += 'End Time = '   + gadgets.json.stringify(end_time) + '\n';
+	    
+	    google.calendar.read.getEvents(eventsCallback, '@viewer', start_time, end_time);
+	    
+	    //alert(out);
+	}
+};
+
+
+function displayRestaurant()
+{
+    //alert(restaurantsArray.length);
+    var html = '<div style="clear:both;"></div>';
+    for (var i=0;i<restaurantsArray.length;i++) {
+        html += '<div class="_restaurant" style="margin-bottom:10px"/>'
+	     +  '<a href="#" class="candidate">'
+	     +  '<div class="title">' + restaurantsArray[i].name 
+		 +  '<a class="ext" target="_blank" href="' + restaurantsArray[i].reserve_url + '"> Reserve table</a> </div>';
+		document.getElementById('out').innerHTML = html;
+	}
+}
+
+function opentableResponse(obj) {
+   //alert(gadgets.json.stringify(obj.data.restaurants));
+   var out = new Array();
+   var restaurants = obj.data.restaurants;
+   // recommends the top 3 restaurants
+   for (var i=0;i<restaurants.length && i<3;i++) {
+       // JS use gabage collector, so might simply passed in the restaurants reference
+       restObj = new Object();
+       restObj.id = restaurants[i].id;
+       restObj.name = restaurants[i].name;
+       restObj.address = restaurants[i].address;
+       restObj.city = restaurants[i].city;
+       restObj.state = restaurants[i].state;
+       restObj.zip = restaurants[i].postal_code;
+       restObj.reserve_url = restaurants[i].reserve_url;
+       restaurantsArray[i]=restObj;
+   }
+   displayRestaurant();
+}
+
+function makeOpentableRequest(location,type)
+{
+    //here the location is a zip code
+    //alert(location);
+    var params = {};
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+    var url= "http://opentable.heroku.com/api/restaurants?";
+    url += "zip=";
+    url += location;
+    //alert(url);
+    restaurantsArray= [];
+    gadgets.io.makeRequest(url, opentableResponse, params);
+}
+
+function googleMapsCallback(res, status) {
+      var ziparr = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
+      var zip = ziparr[1];
+      alert("zip"+zip);
+      makeOpentableRequest(zip,'near');
+}
+
+function displayDeals()
+{
+    var html = '<div style="clear:both;"></div>';
+    for (var i=0;i<dealsArray.length;i++) {
+        html += '<div class="_deal" style="margin-bottom:10px"/>'
+	     +  '<a href="#" class="candidate">'
+	     +  '<div class="title">' + dealsArray[i].name 
+		 +  '<a class="ext" target="_blank" href="' + dealsArray[i].dealUrl + '"> View deal</a> </div>'
+		 +  '<a class="ext" target="_blank" href="' + dealsArray[i].buyUrl + '"> Buy deal</a> </div>'
+		document.getElementById('groupon').innerHTML = html;
+	}
+}
+
+function grouponResponse(obj) {
+    var out = new Array();
+    var deals = obj.data.deals;
+    for (var i=0;i<deals.length && i<3; i++) {
+        dealObj = new Object();
+	dealObj.dealUrl = deals[i].dealUrl;
+	dealObj.buyUrl = deals[i].buyUrl;
+	dealObj.sidebarImageUrl = deals[i].sidebarImageUrl;
+        dealsArray[i]=dealObj;	
+    }
+    displayDeals();
+}
+
+function makeGrouponRequest(lat, lng)
+{
+    var params = {};
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+    var url = "https://api.groupon.com/v2/deals.json?";
+    url += 'lat=' + lat;
+    url += '&lng=' + lng;
+    url += '&client_id=' + grouponApiKey;
+    dealsArray = [];
+    gadgets.io.makeRequest(url, grouponResponse, params);
+}
+
+function navigatorCallback(position) 
+{
+    var location = '';
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    location = latitude + ',' + longitude;
+	var latf = parseFloat(latitude);
+	var lonf = parseFloat(longitude);
+    //alert(location);
+    var point = new google.maps.LatLng(latitude,longitude);
+    //alert(point);
+    var searchZip = new google.maps.Geocoder().geocode({'latLng': point}, googleMapsCallback);
+    makeGrouponRequest(latitude,longitude);
+    //makeOpentableRequest(location,'ll');
+}
+
+
+
+/*
+ {
+ "id":"N3Z2dDVpNTAxb3ZhMW80bmtidDkwcHFnaDAgbXRhbnRhd3lAbQ",
+ "title":"Cormick, Karam, Sage &amp; Mohamed &amp; Peiti",
+ "startTime":{"year":2012,"month":5,"date":25,"hour":19,"minute":0,"second":0},
+ "endTime":{"year":2012,"month":5,"date":25,"hour":20,"minute":0,"second":0},
+ "allDay":false,
+ "location":"Uris Lobby ",
+ "color":"#B99AFF",
+ "palette":{"darkest":"#B99AFF","dark":"#6733DD","medium":"#B99AFF","light":"#B99AFF","lightest":"#EBE3FF"}
+ }
+ */
+
+
+
+
+</script>
+  ]]>
+  
+
+
+  </Content>
+</Module>
+

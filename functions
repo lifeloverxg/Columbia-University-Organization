@@ -1,0 +1,25 @@
+function showlayer(layer){
+        var myLayer = document.getElementById(layer);
+        if(myLayer.style.display=="none" || myLayer.style.display==""){
+        myLayer.style.display="block";
+        if(layer=="aboutlist") {
+                hidelayer("eventslist");
+                hidelayer("forumslist");
+        } else if (layer=="eventslist") {
+                hidelayer("aboutlist");
+                hidelayer("forumslist");
+        } else {
+                hidelayer("aboutlist");
+                hidelayer("eventslist");
+        }
+        } else { 
+                myLayer.style.display="none";
+        }
+}
+
+function hidelayer(layer){
+        var myLayer = document.getElementById(layer);
+        if(myLayer.style.display=="block"){
+                myLayer.style.display="none";
+        } 
+}

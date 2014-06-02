@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Events_old-CUASIA</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+<body class="articlelist">
+<!--
+<div class="header_top">  
+    <div class="w960 center">  
+     <span id="time" class="time"></span>
+     <div class="toplinks"><a href="/plus/heightsearch.php" target="_blank">高级搜索</a>|<a href="/data/sitemap.html" target="_blank">网站地图</a>|<a href="/tags.php">TAG标签</a><a href="/data/rssmap.html" class="rss">RSS订阅</a><span>[<a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.cuasia.org');">设为首页</a>] [<a href="javascript:window.external.AddFavorite('http://www.cuasia.org','CUASIA')">加入收藏</a>]</span></div>
+    </div> 
+</div>
+-->
+<script language="javascript" type="text/javascript">
+	window.onload=function (){
+		setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+	}
+//保存邮件地址
+function saveMailingList(mail,tip)
+{
+	var taget_obj = document.getElementById(tip);
+	var email = document.getElementById(mail).value;
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/mailing_list.php?dopost=save&email="+email+"&tamp="+new Date().getTime());
+	DedeXHTTP = null;
+}
+</script>
+<div class="header">
+	<div class="top w960 center">
+      <div class="title">
+        <h1><a href="http://www.cuasia.org"><img src="/templets/default/images/logo.gif" alt="CUASIA"/></a> </h1>
+      </div>
+<!-- //菜单 -->
+	<div class="module blue mT10 wrapper w963">
+  	<div class="top">
+  	<div class="t_l"></div>
+    	<!-- //如果不使用currentstyle，可以在channel标签加入 cacheid='channeltoplist' 属性提升性能 -->
+    <div id="navMenu">
+    	<ul>
+      	<li><a href='/'><span>Home</span></a></li>
+      	
+      	<li><a href='/a/About/About_US/'  rel='dropmenu10'><span>About us</span></a></li>
+      	
+      	<li><a href='/a/Forums1/'  rel='dropmenu15'><span>Forums</span></a></li>
+      	
+      	<li><a href='/a/Events/'  rel='dropmenu20'><span>Events</span></a></li>
+      	
+      	<li><a href='/Team/' ><span>Team</span></a></li>
+      	
+      	<li><a href='/Contact_US/' ><span>Contact US</span></a></li>
+      	
+    	</ul>
+    </div>
+
+  	<div class="t_r"></div>
+
+
+	</div>
+</div><!-- //header -->
+
+<!-- /header -->
+<div class="w960 center clear mt1">
+ <div class="pleft">
+  <div class="place"> <strong>当前位置:</strong> <a href='http://www.cuasia.org/'>Home</a> > <a href='/a/Events/'>Events_old</a> >  </div>
+  <!-- /place -->
+  <div class="listbox">
+   <ul class="e2">
+    <li> <a href='/a/Career_Development/2011/0922/13.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0922/13.html" class="title"><b>江苏省海外高层次人才交流和项目合作洽谈会</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:40:22 <small>点击：</small>170 <small>好评：</small>8 </span>
+     <p class="intro"> 为深入实施人才强省、人才国际化战略，落实“江苏省万名海外高层次人才引进计划”，大力引进江苏紧缺急需的海外高层次人才和合作项目，江苏省人民政府决定在多伦多、纽约、旧... </p>
+    </li><li> <a href='/a/Career_Development/2011/0922/14.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0922/14.html" class="title"><b>Mckinsey Greater China Office Recruiting</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:40:15 <small>点击：</small>254 <small>好评：</small>8 </span>
+     <p class="intro"> The Greater China office offers a unique opportunity for our consultants to learn from and work with North American clients and teams as part of their McKinsey experience. Jade is a select group of talented associates who begin their career ... </p>
+    </li><li> <a href='/a/Career_Development/2011/0922/15.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0922/15.html" class="title"><b>IBM China Career Opportunities</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:40:06 <small>点击：</small>254 <small>好评：</small>16 </span>
+     <p class="intro"> Dear Chinese Students and Scholars, You have made through a challenging journey to pursue top tier education here in the US. While you should be proud of your supreme education background, you may wonder how to utilize this advantage to beg... </p>
+    </li><li> <a href='/a/Career_Development/2011/0922/16.html' class='preview'><img src='/images/defaultpic.gif'/></a>
+     [<b><a href='/a/Career_Development/'>Career Development Events</a></b>] <a href="/a/Career_Development/2011/0922/16.html" class="title"><b>上海市赴海外广纳金融贤才</b></a> <span class="info"> <small>日期：</small>2012-08-30 04:39:58 <small>点击：</small>159 <small>好评：</small>75 </span>
+     <p class="intro"> 由上海市人力资源和社会保障局、上海市金融服务办公室联合组织的“上海市赴英美招聘高层次金融人才招聘工作团”将于12月5日启程赴英国伦敦金融城、美国芝加哥、纽约招聘金融岗... </p>
+    </li>
+   </ul>
+  </div>
+  <!-- /listbox -->
+  <div class="dede_pages">
+   <ul class="pagelist">
+    <li><a href='list_20_1.html'>首页</a></li>
+<li><a href='list_20_3.html'>上一页</a></li>
+<li><a href='list_20_1.html'>1</a></li>
+<li><a href='list_20_2.html'>2</a></li>
+<li><a href='list_20_3.html'>3</a></li>
+<li class="thisclass">4</li>
+<li>末页</li>
+<li><select name='sldd' style='width:36px' onchange='location.href=this.options[this.selectedIndex].value;'>
+<option value='list_20_1.html'>1</option>
+<option value='list_20_2.html'>2</option>
+<option value='list_20_3.html'>3</option>
+<option value='list_20_4.html' selected>4</option>
+</select></li>
+<li><span class="pageinfo">共 <strong>4</strong>页<strong>34</strong>条</span></li>
+
+   </ul>
+  </div>
+  <!-- /pages -->
+ </div>
+ <!-- /pleft -->
+ <div class="pright">
+  <div class="commend">
+   <dl class="tbox light">
+    <dt class='light'><strong>推荐内容</strong></dt>
+    <dd class='light'>
+     <ul class="d4">
+      <li><a href="/a/Events/Social_Events/2011/1112/28.html">Woodbury Purchasing Page</a>
+       <p>活动及付款咨询请电邮至：cuasia.event@gmail.com
+...</p>
+      </li>
+<li><a href="/a/Career_Development/2011/1121/29.html">CU-Asia: 国际学生职业发展及OPT/H1-</a>
+       <p>CU-Asia: Career Development Presentation For International Students on Nov. 30th...</p>
+      </li>
+<li><a href="/a/Career_Development/2012/0125/38.html">Job post：Project Manager, IT director</a>
+       <p>Project Manager, IT director Responsibilities: Working with a venture backed comp...</p>
+      </li>
+<li><a href="/a/Career_Development/2012/0209/40.html">2012年暨南大学海外优秀人才现场招</a>
+       <p>暨南大学是中国知名学府，直属国务院侨办，是中国“211工程”...</p>
+      </li>
+<li><a href="/a/Career_Development/2012/0209/41.html">中国无锡海外（美国）高层次人才</a>
+       <p>为扩大无锡“530”计划品牌效应，进一步加大引进海外高层次人...</p>
+      </li>
+<li><a href="/a/Career_Development/2012/0223/44.html">Spring Career Fair - Friday, Feb. 24</a>
+       <p>Attend the Spring Career Fair on Friday, Feb. 24, 11am-4pm! Over 130 registered e...</p>
+      </li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <!-- /commend -->
+  <div class="hot mt1 light">
+   <dl class="tbox">
+    <dt class='light'><strong>热点内容</strong></dt>
+    <dd class='light'>
+     <ul class="c1 ico2">
+      <li><a href="/a/Culture_Events/2012/0925/58.html">2012德云社“笑爆笑”相声</a></li>
+<li><a href="/a/Events/Social_Events/2011/1112/28.html">Woodbury Purchasing Page</a></li>
+<li><a href="/a/Events/Social_Events/2012/0903/56.html">NYDC：畅游西点军校 + Woo</a></li>
+<li><a href="/a/Events/Social_Events/2012/1106/63.html">张靓颖我的模样世界巡回</a></li>
+<li><a href="/a/Events/Social_Events/2012/0903/55.html">NYDC: Trip on 9/16/2012</a></li>
+<li><a href="/a/Events/Social_Events/2012/0406/45.html">NYDC: Trip to Philadelphia Purc</a></li>
+<li><a href="/a/Career_Development/2011/1121/29.html">CU-Asia: 国际学生职业发展</a></li>
+<li><a href="/a/Events/Columbia_Night/2012/0121/36.html">2012哥伦比亚之夜入场指南</a></li>
+<li><a href="/a/Events/Social_Events/2011/0914/7.html"> 畅游西点军校 + Woodbury 采</a></li>
+<li><a href="/a/Events/Social_Events/2012/1015/59.html">中美科技创新与合作发展</a></li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="listRtPicAD2" style="margin:10px auto"></div>
+ </div>
+ <!-- /pright -->
+</div>
+<div id="innerfooterAD" style="margin:10px auto; width:726px"></div>
+    <div class="footer_left"></div>
+    <div class="footer_body">
+    	    <div class="b-links">
+<a href="http://www.facebook.com/cuasia?ref=ts" target="_blank"><img src="/uploads/flink/facebook.png"/></a>
+<a href="http://twitter.com/#!/CU_ASIA" target="_blank"><img src="/uploads/flink/twitte.png"/></a>
+<a href="http://weibo.com/2296416574" target="_blank"><img src="/uploads/flink/sina.png"/></a>
+<a href="http://www.renren.com" target="_blank"><img src="/uploads/flink/renren.png"/></a>
+</div>
+    		<div class="powered">
+		Powered by <a href="http://www.cuasia.org" title="哥伦比亚大学亚太发展协会。" target="_blank"><strong>CUASIA CMS V57_UTF8_SP1</strong></a> © 2011-2015 <a href="http://bbs.cuasia.org/" target="_blank">CUASIA</a> Forum.<br />
+		<div class="copyright">Copyright &copy; 2011-2012 CUASIA. All Rights Reserved CUASIA   </div>
+		</div>
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+<!-- /footer -->
+</body>
+</html>
+http://love.whnews.cn ?????http://qss.whnews.cn ?????http://vote.whnews.cn/ ???????http://www.nxtv.com.cn/article/society/20130712.html ????????http://www.nxtv.com.cn/article/tdnxnews/20130723314538.html ??????http://www.northnews.cn/2013/0723/1174339.shtml ????????http://info.yougou.com/pinpai-rfgj/index.php ??????http://soft.zzti.edu.cn/pic/foot/index.html ????????
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

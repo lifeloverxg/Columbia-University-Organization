@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CU-Asia 2013</title>
+    <!--<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content=" CU-Asia（www.cuasia.org）是一个经哥伦比亚大学认可的校园组织，致力于促进美国和亚太地区（特别是大中华地区）之间的相互了解和文化交流。在过去多种多样的活动中，我们最为知名的就是举办多场精彩、高规格的讲座和演出。最近几年我们邀请或联合邀请的名人包括：前谷歌中国总裁李开复博士，百度总裁李彦宏先生，诺贝尔经济学奖得主约瑟夫*斯蒂格利茨博士，中国驻纽约总领馆总领事孙国祥大使，工商银行董事长姜建清博士，导演姜文，钢琴演奏家郎朗，表演艺术家姜昆、唐国强、张铁林等等。" name="description">
+    <meta content="CU-Asia哥伦比亚大学亚太发展协会" name="author">
+    <meta content="CU-Asia,Columbia University,CU,CUAsia,哥伦比亚大学,亚太发展协会" name="keywords">
+    <meta content="index,follow" name="robots">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/templets/ca-neon/assets/css/cuasia.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="ca-nav">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">CU-Asia</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#about">About</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                    <li><a href="#">Featured Events</a></li>
+                    <li><a href="#">Photo Gallery</a></li>
+                    <!--<li class="divider"></li>
+                    <li class="nav-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>-->
+                  </ul>
+                </li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Campus Life</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Forums</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Sponser</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ca-header">
+    </div>
+
+    <div class="ca-carousel">
+      <div class="ca-hspace"></div>
+      <div id="caCarousel" class="carousel slide container">
+        <ol class="carousel-indicators">
+          <li data-target="#caCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#caCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#caCarousel" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          {dede:arclist flag='f' row='1'}
+          <div class="item active">
+            <img src="[field:litpic/]" alt="">
+            <div class="carousel-caption">
+              <h4>[field:title function='html2text(@me)'/]</h4>
+              <p>[field:description function='cn_substr(@me,220)'/]...</p>
+              <a class="btn btn-large btn-primary" href="[field:arcurl/]">More</a>
+            </div>
+          </div>
+          {/dede:arclist}
+          {dede:arclist flag='f' limit='1,2'}
+          <div class="item">
+            <img src="[field:litpic/]" alt="">
+            <div class="carousel-caption">
+              <h4>[field:title function='html2text(@me)'/]</h4>
+              <p>[field:description function='cn_substr(@me,220)'/]...</p>
+              <a class="btn btn-large btn-primary" href="[field:arcurl/]">More</a>
+            </div>
+          </div>
+          {/dede:arclist}
+        </div>
+        <a class="left carousel-control" href="#caCarousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#caCarousel" data-slide="next">›</a>
+      </div>
+    </div>
+
+    <div class="ca-content">
+      <div class="container">
+        <h3 class="ca-title-row">
+          Upcoming Events
+          <a href="#" class="pull-right hidden-phone">See More..</a>
+        </h3>
+        <div class="row">
+          {dede:arclist flag='h' titlelen=36 limit='0,3'}
+          <div class="span4 ca-list">
+            <h5>[field:title/]</h5>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+            <p><a class="btn" href="[field:arcurl/]" target="_blank">View details »</a></p>
+          </div>
+          {/dede:arclist}
+        </div>
+        <div class="row">
+          {dede:arclist flag='h' titlelen=36 limit='3,3'}
+          <div class="span4 ca-list">
+            <h5>[field:title/]</h5>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+            <p><a class="btn" href="[field:arcurl/]" target="_blank">View details »</a></p>
+          </div>
+          {/dede:arclist}
+        </div>
+
+
+        <div class="ca-hspace"></div>
+        <h3 class="ca-title-row">
+          热点内容
+          <a href="#" class="pull-right hidden-phone">See More..</a>
+        </h3>
+        <div class="row">
+          {dede:arclist orderby=click titlelen=36 limit='0,3'}
+          <div class="span4 ca-list">
+            <h5>[field:title/]</h5>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+            <p><a class="btn" href="[field:arcurl/]" target="_blank">View details »</a></p>
+          </div>
+           {/dede:arclist}
+        </div>
+        <div class="row">
+          {dede:arclist orderby=click titlelen=36 limit='3,3'}
+          <div class="span4 ca-list">
+            <h5>[field:title/]</h5>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+            <p><a class="btn" href="[field:arcurl/]" target="_blank">View details »</a></p>
+          </div>
+           {/dede:arclist}
+        </div>
+
+
+        <div class="ca-hspace"></div>
+        <h3 class="ca-title-row">
+          推荐内容
+          <a href="#" class="pull-right hidden-phone">See More..</a>
+        </h3>
+        <div class="row">
+          {dede:arclist flag='c' titlelen=36 limit='0,3'}
+          <div class="span4 ca-list">
+            <h5>[field:title/]</h5>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+            <p><a class="btn" href="[field:arcurl/]" target="_blank">View details »</a></p>
+          </div>
+           {/dede:arclist}
+        </div>
+        <div class="row">
+          {dede:arclist flag='c' titlelen=36 limit='3,3'}
+          <div class="span4 ca-list">
+            <h5>[field:title/]</h5>
+            <p class="ca-listp">[field:description function='cn_substr(@me,550)'/]...</p>
+            <p><a class="btn" href="[field:arcurl/]" target="_blank">View details »</a></p>
+          </div>
+           {/dede:arclist}
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="ca-bottom footer">
+      <div class="ca-fspace"></div>
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <h5>COMMUNITY</h5>
+            <a class="ca-img-wrap" href="http://www.facebook.com/cuasia?ref=ts" target="_blank">
+              <img src="/templets/ca-neon/assets/img/facebook.png" />
+            </a>
+            <a class="ca-img-wrap" href="http://twitter.com/#!/CU_ASIA" target="_blank">
+              <img src="/templets/ca-neon/assets/img/twitte.png" />
+            </a><br/><br/>
+            <a class="ca-img-wrap" href="http://weibo.com/2296416574" target="_blank">
+              <img src="/templets/ca-neon/assets/img/sina.png" />
+            </a>
+            <a class="ca-img-wrap" href="http://www.renren.com" target="_blank">
+              <img src="/templets/ca-neon/assets/img/renren.png" />
+            </a>
+          </div>
+          <div class="span2">
+            <h5>CONTACT US</h5>
+            <a href="#" target="_blank">Donation</a><br>
+            <a href="#" target="_blank">Advertisment</a><br>
+            <a href="#" target="_blank">Join us</a><br>
+            <a href="#" target="_blank">Feedback</a>
+          </div>
+          <div class="span2">
+            <h5>COMMUNITY</h5>
+            <a href="#" target="_blank">Renren</a><br>
+            <a href="#" target="_blank">Twitter</a><br>
+            <a href="#" target="_blank">Facebook</a><br>
+            <a href="#" target="_blank">Weibo</a>
+          </div>
+          <div class="span5">
+            <h3>CU-Asia</h3>
+            <p>A recongnized Columbia campus organization devoted to promoting mutual understanding ar exchanged between U.S. and the Asia-pacific region, particularly Greater China.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/templets/ca-neon/libs/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+<div style="display:none"><a href="http://www.cuasia.org/louis-vuitton-monogram-artsy-mm-sale/" title="louis vuitton monogram artsy mm sale">louis vuitton monogram artsy mm sale</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/authentic-gucci-handbags-for-less/">authentic gucci handbags for less</a></div>
+<div style="display:none"><a href="http://www.cuasia.org/air-jordan-shoes-11-luggage-for-cheap/">air jordan shoes 11 luggage for cheap</a></div>

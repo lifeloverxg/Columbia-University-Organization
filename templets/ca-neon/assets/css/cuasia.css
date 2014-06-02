@@ -1,0 +1,24 @@
+/*author:cuasia lbneon*/
+/*url:www.cuasia.org*/
+
+.1body { background-image: url(../img/body-bg.gif); background-repeat: repeat; background-color: #6c6b6b }
+
+body { background-color: #283137; }
+
+.ca-nav{ background-image: url(../img/list.gif); background-repeat: repeat; }
+.ca-header { background-image: url(../img/body-bg.gif); background-repeat: repeat; min-height: 55px; }
+.ca-hspace { min-height: 35px; }
+.ca-fspace { min-height: 15px; }
+.ca-carousel { background-image: url(../img/content-bg.gif); background-repeat: repeat; min-height: 600px; margin-bottom: 0px; overflow:hidden; }
+.ca-content { background-color: #fdfdfd; min-height: 100px; border:1px solid #eee; }
+.ca-title-row { border-bottom:1px solid #c9c9c9; }
+.ca-title-row a { color: #ccc; }
+.ca-title-row a:hover { color: #000; }
+.ca-bottom { background-image: url(../img/body-bg.gif); background-repeat: repeat; color: #fff; min-height: 160px;}
+.ca-bottom a{ color: #fff; }
+.ca-list{ border-bottom:1px solid #c9c9c9; }
+.ca-img-wrap{ padding:5px; }
+.ca-listp{ height:100px; }
+/*.cuCarousel { width: 600px; }*/
+.carousel img { min-width: 100%; }
+/*.carousel img { width: 960px; }*/
